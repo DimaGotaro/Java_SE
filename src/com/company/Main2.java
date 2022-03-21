@@ -119,6 +119,17 @@ public class Main2 {
         System.out.println(h10);
         boolean h11=(4>5)&(5>6); // true если оба true
         System.out.println(h11);
+        h4+=h3; // h4 = h4 + h3
+        System.out.println(h4);
+
+        // Преобразования базовых типов данных
+        int h16=584;
+        byte h12=(byte) h16; // меньше по занимаемом месту в памяти к большему, если наоборот то автоматически
+        System.out.println(h12);
+        int h13=h12,h15=546849453;
+        System.out.println(h13);
+        float h14=h15;
+        System.out.println(h14);
     }
 }
 
