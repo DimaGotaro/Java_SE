@@ -1,5 +1,5 @@
 package com.company;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -55,16 +55,21 @@ public class Main2 {
 //        printf
         System.out.printf("Name=%s; Age=%d; Height=%.3f; \n",e4,a1,d5);
 
-        /*Scaner, ввод значений
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите имя: ");
-        String f1= in.nextLine();
+//        Scaner, ввод значений
+        Scanner in = new Scanner(System.in); /*пишется один раз,
+         in(перед равно) используется и в последющих операциях ввода,
+         это имя вводимой переменной которую мы вводим с консоли*/
+        /*System.out.print("Введите имя: ");
+        String f1= in.nextLine(); // момент ввода с консоли, in это имя вводимой переменной
         System.out.print("Введите возраст: ");
         int f2= in.nextInt();
         System.out.print("Введите вес: ");
         float f3= in.nextFloat(); //вводить нужно через запятую, с точкой ошибка
-        System.out.printf("Name=%s; Age=%d; Height=%.2f; \n", f1, f2, f3);
-        in.close();*/
+        System.out.printf("Name=%s; Age=%d; Height=%.2f; \n", f1, f2, f3);*/
+//        in.close();
+        /*заканчивает ввод с консоли, ставить в самом конце, после всех операций ввода
+         если поставить сейчас то вводить с консоли больше будет нельзя*/
+
 
         /*Арифметические операции*/
         int g1=25,g2=4,g3,g6,g12=2;
@@ -144,9 +149,9 @@ public class Main2 {
         System.out.println(h27);
 
         // Условные конструкции
-        int i1=8,i2=9;
+        int i1=7,i2=9;
         if (i1<i2 && i2>7) { // после совпадения, следующие не рассматривает
-            System.out.println("i1 меньше чем i2 и больше 7");
+            System.out.println("i1 меньше чем i2 и i2 больше 7");
         }
         else if (i1<i2){
             System.out.println("i1 больше чем i2");
@@ -159,18 +164,63 @@ public class Main2 {
         }
 
         switch (i1) {
-            case 2:
-                System.out.println("число равно 2");
-                break; // прекращает выполнение следующих case, если выполнено
+            case 7:
+                System.out.println("число равно 7");
+                // break; // прекращает выполнение следующих case, если выполнено
             case 8:
                 System.out.println("число равно 8");
-                i1++;
+                //i1++;
             case 9:
                 System.out.println("число равно 9");
                 break;
             default:
                 System.out.println("число не 2,3,4");
+        } // если не будет break, то задачи будут выполняться без совпадений case, до break
+
+        switch (i1) {
+            case 7:
+                i2=11;
+            case 8:
+                i2=12;
+                break;
+            default:
+                i2=24;
         }
+        System.out.println(i2);
+
+        // теренарная операция, условие ? (true) : (false)
+        int i3=4, i4=5;
+        int i5=i3<i4? (i3+i4) : (i4-i3);
+        System.out.println(i5);
+
+        /*Напишите консольную программу, в которой пользователь с клавиатуры вводит два числа.
+        А программа сранивает два введенных числа и выводит на консоль результат сравнения
+        (два числа равны, первое число больше второго или первое число меньше второго).*/
+        /*System.out.print("Введите i6: ");
+        int i6= in.nextInt();
+        System.out.print("Введите i7: ");
+        int i7= in.nextInt();
+        if (i6<i7) {
+            System.out.println("i6 меньше чем i7");
+        }
+        else if (i6>i7) {
+            System.out.println("i6 больше чем i7");
+        }
+        else {
+            System.out.println("i6 равно i7");
+        }*/
+
+        /*Напишите консольную программу, в которой пользователь вводит с клавиатуры число.
+        Если число одновременно меньше 9 и больше 2, то программа выводит "Число больше 5 и меньше 10".
+        Иначе программа выводит сообщение "Неизвестное число".*/
+        /*System.out.print("Введите число: ");
+        int i8= in.nextInt();
+        if (i8<9 && i8>2) {
+            System.out.println("Число больше 5 и меньше 10");
+        }
+        else {
+            System.out.println("Неизвестное число");
+        }*/
     }
 }
 
