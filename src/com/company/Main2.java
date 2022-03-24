@@ -109,7 +109,7 @@ public class Main2 {
         h6=h5^h4;
         System.out.println(h6);
         System.out.println(~h3); // логическое отрицание, меняет 1 на 0
-        boolean h7=h1==h2;
+        boolean h7=h1==h2; // == - равно, не присваивание
         System.out.println(h7);
         boolean h8=h1==4; // проверка на соответствие
         boolean h9=h1!=4; // обратная операция
@@ -124,12 +124,53 @@ public class Main2 {
 
         // Преобразования базовых типов данных
         int h16=584;
-        byte h12=(byte) h16; // меньше по занимаемом месту в памяти к большему, если наоборот то автоматически
+        byte h12=(byte) h16,h22=56; // меньше по занимаемом месту в памяти к большему, если наоборот то автоматически
         System.out.println(h12);
         int h13=h12,h15=546849453;
         System.out.println(h13);
         float h14=h15;
         System.out.println(h14);
+        double h17=5.56497,h20=8.9856;
+        int h18=(int)Math.round(h17),h19=4; // округление
+        System.out.println(h18);
+        double h21=h19+h20;
+        System.out.println(h21);
+        short h23=6895;
+        byte h24=(byte) (h23+h22); // не хватило памяти в byte
+        int h25=h22+h23;
+        System.out.println(h24+" "+h25);
+        char h26='v'; // char в int
+        int h27=h26+h23;
+        System.out.println(h27);
+
+        // Условные конструкции
+        int i1=8,i2=9;
+        if (i1<i2 && i2>7) { // после совпадения, следующие не рассматривает
+            System.out.println("i1 меньше чем i2 и больше 7");
+        }
+        else if (i1<i2){
+            System.out.println("i1 больше чем i2");
+        }
+        else if (i1==9){
+            System.out.println("i1 равно 9");
+        }
+        else  {
+            System.out.println("числа равны");
+        }
+
+        switch (i1) {
+            case 2:
+                System.out.println("число равно 2");
+                break; // прекращает выполнение следующих case, если выполнено
+            case 8:
+                System.out.println("число равно 8");
+                i1++;
+            case 9:
+                System.out.println("число равно 9");
+                break;
+            default:
+                System.out.println("число не 2,3,4");
+        }
     }
 }
 
