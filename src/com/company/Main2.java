@@ -194,7 +194,7 @@ public class Main2 {
         System.out.println(i5);
 
         /*Напишите консольную программу, в которой пользователь с клавиатуры вводит два числа.
-        А программа сранивает два введенных числа и выводит на консоль результат сравнения
+        А программа сравнивает два введенных числа и выводит на консоль результат сравнения
         (два числа равны, первое число больше второго или первое число меньше второго).*/
         /*System.out.print("Введите i6: ");
         int i6= in.nextInt();
@@ -429,16 +429,17 @@ public class Main2 {
         /*Напишите программу, которая выводит на консоль таблицу умножения*/
         for (int j=1; j<10; j++) {
             for (int i = 1; i < 10; i++) {
-                System.out.print(" "+i*j+" ");
+                System.out.print("\t"+i*j);
             }
             System.out.println();
         }
         // правильное решение, остальное разные способы
+        System.out.println();
 
         int j20=1,j21=1;
         for (int j=1;j<10;j++) {
             for (int i=1; i < 10; i++) {
-                System.out.print(" " + j20 + " ");
+                System.out.print("\t" + j20);
                 j20+=j21;
             }
             System.out.println();
@@ -450,7 +451,7 @@ public class Main2 {
         int j22=1,j23=1;
         for (int j=1; j<10; j++) {
             for (int i = 1; i < 10; i++) {
-                System.out.print(" " + j22*j23 + " ");
+                System.out.print("\t" + j22*j23);
                 j23++;
             }
             System.out.println();
@@ -462,7 +463,7 @@ public class Main2 {
         int j24=1,j25=0,j26=1;
         for (int j=1; j<10; j++) {
             for (int i = 1; i < 10; i++) {
-                System.out.print(" "+(j24+j25)+" ");
+                System.out.print((j24+j25)+"\t");
                 j25+=j26;
             }
             System.out.println();
@@ -495,7 +496,7 @@ public class Main2 {
         }
         while (j31==true);*/
 
-        int j31;
+        /*int j31;
         do {
             System.out.print("Введите два числа: ");
             int j27 = in.nextInt();
@@ -505,12 +506,77 @@ public class Main2 {
             System.out.print("Нужно ли завершить выполнение:(1-выход, любое-продолжить) ");
             j31 = in.nextInt();
         }
-        while (j31!=1);
+        while (j31!=1);*/
+
+        /*В банк внесён депозит в 100$ под 5% годовых, каждый месяц депозит пополняется на сумму первоначального
+         вклада. Рассчитать сумму через 20 лет.*/
+        double j32=5, j33=100, j34=240, j35=1, j36=0;
+        do {
+            j36+=j33;
+            j36+=j36*j32/100/12;
+            j35++;
+        }
+        while (j35<=j34);
+        System.out.printf("%.2f \n", j36);
+
+        // Массивы
+        int mass[];
+//        int[] mass2; // объявление
+        mass = new int[5];
+        int[] mass2 = new int[4]; // объявление и инициализация
+        mass2[0]=95;
+        mass2[1]=65; // задали второй элемент массива
+        mass2[2]=18;
+        mass2[3]=36;
+        System.out.println(mass2[1]); // вывод третьего элемента массива
+        int[] mass3 = new int[] {1,5,7,8,9}; // при таком способе скобки должны быть пустыми!
+        System.out.println(mass3[3]);
+        int[] mass4 = {2,3,4,9};
+
+        int length = mass4.length; // количество элементов массива
+        System.out.println(length);
+        int last = mass4[mass4.length-1]; // вывод последнего элемента "4-1" mass4[3]
+        System.out.println(last);
+
+        int[][] mass5 = {{1,3},{6,7,9}}; // двумерный массив
+        System.out.println(mass5[1][2]); // в первых скобках номер строки, во вторых порядковый номер элемента
+        int[][] mass6 = new int[2][3]; // кол-во строк и столбцов
+        mass6[1][0] = 87;
+        System.out.println(mass6[1][0]);
+
+        int[][][] mass7 = new int[3][2][3]; /*трёхмерный, параллелограмм, длина 3, ширина 2, высота 3,
+        0,0,0 в одной вершине, а 2,1,2 в противоположной через диагональ, 18 элементов*/
+        System.out.println(mass7[0][0][1]); // x,y,z
+
+        int[][] mass8 = new int[2][]; // зубчатый массив, в двумерном массиве строки это - одномерные массивы
+        mass8[0] = new int[2]; // в первых скобках номер строки, во вторых скобках кол-во элементов
+        mass8[1] = new int[3];
+        System.out.println(mass8[1][2]);
+        System.out.println();
+
+        for (int i : mass4) { // перебор элементов в наборах элементов, например, в массивах
+            System.out.println(i);
+        }
+        System.out.println();
+        for (int i = 0; i < mass4.length; i++) { // то же самое, но подробнее
+            System.out.println(mass4[i]);
+        }
+        System.out.println();
+        int[][] mass9 = {
+                {2,5,9,7},
+                {5,8},
+                {3,7,9}
+        };
+//        System.out.println(mass9[0].length);
+        // перебор многомерных массивом
+        for (int i=0; i< mass9.length; i++) {
+            for (int j=0; j < mass9[i].length; j++) {
+                System.out.print(mass9[i][j]+"\t");
+            }
+            System.out.println();
+        }
     }
 }
-
-
-
 
 
 
