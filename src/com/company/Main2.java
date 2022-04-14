@@ -547,6 +547,20 @@ public class Main2 {
         int[][][] mass7 = new int[3][2][3]; /*трёхмерный, параллелограмм, длина 3, ширина 2, высота 3,
         0,0,0 в одной вершине, а 2,1,2 в противоположной через диагональ, 18 элементов*/
         System.out.println(mass7[0][0][1]); // x,y,z
+        System.out.println(mass7[0][0].length);
+        System.out.println();
+        int k1 = 0;
+        for (int i=0; i< mass7[0][0].length; i++) { // перебор элементов трёхмерного массива
+            for (int j=0; j< mass7[0].length; j++) {
+                for (int k=0; k< mass7.length; k++) {
+                    mass7[k][j][i]+=k1;
+                    System.out.print(mass7[k][j][i]+"\t");
+                    k1++;
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
 
         int[][] mass8 = new int[2][]; // зубчатый массив, в двумерном массиве строки это - одномерные массивы
         mass8[0] = new int[2]; // в первых скобках номер строки, во вторых скобках кол-во элементов
@@ -574,6 +588,135 @@ public class Main2 {
                 System.out.print(mass9[i][j]+"\t");
             }
             System.out.println();
+        }
+        // Методы
+        hello();
+        welcome();
+        sum(8,3);
+        int k4=8, k5=2;
+        sum(k4,k5);
+        sum(10,k5);
+        disp("Dimonchik", 25);
+        sum_all("Сумма чисел: 6,9,7,4,1,5,8 = ",6,9,7,4,1,5,8);
+        int k10=sum2(5,9,6);
+        System.out.println(k10);
+        System.out.println(day(9));
+        System.out.println(day(15));
+        dayt(56);
+        System.out.println(sum3(2,3,5,1));
+        System.out.println(sum4(2,3,5,2));
+        System.out.printf("%.1f \n", sum3(1.2,5.3,2.8,1.4));
+        System.out.println(fact(6));
+        System.out.println(fact2(7));
+        System.out.println(fib(5));
+    }
+    static void hello() {
+        System.out.println("Hello!");
+    }
+    static void welcome() {
+        System.out.println("Welcome to Java!");
+    }
+    static void sum(int k2, int k3) {
+        int k4=k2+k3;
+        System.out.println(k4);
+    }
+    static void disp(String name, int k6) {
+        System.out.println(name+" "+k6);
+    }
+    static void sum_all(String name, int ...mass10) { // сумма элементов массива, int ...mass10 должна стоять последней!
+        int mas=0;
+        for (int i:
+             mass10) {
+            mas+=i;
+        }
+        System.out.println(name+mas);
+    }
+    static int sum2(int k7,int k8, int k9) { // возвращает в sum2 сумму, в void - не возвращает!
+        return k7+k8+k9;
+    }
+    static String day(int k11) {
+        if (k11>=0 && k11<=6) {
+            return "Сейчас ночь.";
+        }
+        else if (k11>=7 && k11<=12) {
+            return "Сейчас утро!";
+        }
+        else if (k11>=13 && k11<=18) {
+            return "Сейчас день.";
+        }
+        else if (k11>=19 && k11<=24) {
+            return "Сейчас вечер.";
+        }
+        else {
+            return "Введите число от 0 по 24";
+        }
+    }
+    static void dayt(int k11) {
+        if (k11>=0 && k11<=6) {
+            System.out.println("Сейчас ночь.");
+        }
+        else if (k11>=7 && k11<=12) {
+            System.out.println("Сейчас утро!");
+        }
+        else if (k11>=13 && k11<=18) {
+            System.out.println("Сейчас день.");
+        }
+        else if (k11>=19 && k11<=24) {
+            System.out.println("Сейчас вечер.");
+        }
+        else {
+            return; // выход из метода void dayt
+        }
+    }
+    // Перегрузка методов
+    static int sum3(int ...sum3m) {
+        int sum3s=0;
+        for (int i:
+             sum3m) {
+            sum3s+=i;
+        }
+        return sum3s;
+    }
+    static double sum3(double ...sum3m) {
+        double sum3s=0;
+        for (double i:
+                sum3m) {
+            sum3s+=i;
+        }
+        return sum3s;
+    }
+    static int sum4(int ...sum3m) { // другой способ суммы элементов массива, больше возможностей
+        for (int i =1; i<sum3m.length; i++) {
+            sum3m[0]+=sum3m[i];
+        }
+        return sum3m[0];
+    }
+    /*Рекурсивная функция. Всегда нужен базовый вариант, то есть первый в рекурсии,
+    мы постоянно будем к нему возвращаться*/
+    // Факториал
+    static int fact(int k12) {
+        if (k12 == 1) { // первый вариант
+            return 1;
+        }
+        return k12*fact(k12-1);
+    }
+    static int fact2(int k12) {
+        int k13=1;
+        for (int i=1; i<=k12; i++) {
+            k13*=i;
+        }
+        return k13;
+    }
+    // Число Фибоначчи
+    static int fib(int m) {
+        if (m == 0) {
+            return 0;
+        }
+        if (m == 1) {
+            return 1;
+        }
+        else {
+            return fib(m-1)+fib(m-2);
         }
     }
 }
