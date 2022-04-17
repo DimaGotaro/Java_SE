@@ -609,6 +609,76 @@ public class Main2 {
         System.out.println(fact(6));
         System.out.println(fact2(7));
         System.out.println(fib(5));
+
+        // Обработка исключений
+        try {
+            int[] mass11 = new int[3];
+//            mass11[3]=45; // Ошибка. Выход за рамки массива!
+            mass11[2]=Integer.parseInt("kfg"); // Ошибка преобразования из строки в число!
+            System.out.println(mass11[3]);
+        }
+        // тип Exception универсальный, для большинства исключений, в конце будет ошибка, ниже конкретные исключения
+        // они ошибку не вызывают.
+        // Если сработало исключение, то управление переходит к блоку catch, ниже!
+//        catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+        catch (ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Выход за рамки массива!");
+        }
+        catch (NumberFormatException ex) {
+            System.out.println("Ошибка преобразования из строки в число!");
+        }
+        finally {
+            System.out.println("Блок Finally.");
+        }
+        System.out.println("Программа завершена!"); // следующее условие, выполнено
+        System.out.println();
+
+        // throw
+        /*try {
+            int k13 = in.nextInt();
+            if (k13>=30) {
+                throw new Exception(*//*"Число должно быть меньше 30"*//*); *//* Если сработало исключение,
+                то управление переходит к блоку catch, ниже*//*
+            }
+        }
+        catch (Exception ex){
+            System.out.println("Число должно быть меньше 30"*//*ex.getMessage()*//*);
+        }
+        System.out.println("Программа завершена!");*/
+
+        // Ооп
+        /*В одном файле может быть только один класс public. Класс это новый тип объекта, параметры этого типа
+        мы задали при написании класса, внизу, после класса Main2. Dima это переменная, ниже мы указываем на объект*/
+        Personal Dima = new Personal(); // создание объекта класса Personal(объект имеет тип Personal), без параметров
+        Dima.info();
+        Dima.name="Dimonchik";
+        Dima.age=25;
+        Dima.info();
+        System.out.println();
+
+        Personal Dima2 = new Personal("Димоньчик", 255); // вызов конструктора с параметрами
+        Dima2.info();
+
+        Personal Sanya = new Personal("Санёчек", 26);
+        Sanya.info();
+
+        Personal All = new Personal(20);
+        All.info();
+
+        Personal All2 = new Personal();
+        All2.info();
+        System.out.println();
+
+        Personal2 tom = new Personal2();
+        tom.info();
+
+        Personal2 bob = new Personal2("Bob");
+        bob.info();
+
+        Personal2 cris = new Personal2("Cris", 27);
+        cris.info();
     }
     static void hello() {
         System.out.println("Hello!");
@@ -718,6 +788,57 @@ public class Main2 {
         else {
             return fib(m-1)+fib(m-2);
         }
+    }
+}
+// Ооп
+class Personal {
+    String name; // поле класса
+    int age; // поле класса
+
+    Personal() {
+        name = "Общий";
+        age = 18;
+    }
+
+    Personal(int g) {
+        name = "Общий";
+        age = g;
+    }
+
+    Personal(String n, int g) {
+        name = n;
+        age = g;
+    }
+
+    void info() {
+        System.out.printf("Имя: %s. Возраст: %d.\n", name, age);
+    }
+}
+
+class Personal2 {
+    String name; // поле класса
+    int age; // поле класса
+
+    {
+        name = "Все";
+        age = 22;
+    }
+
+    Personal2(String n, int g) {
+        this.name=n; // параметр n присваивается полю name
+        this.age=g;
+    }
+
+    Personal2() {
+//        this("Все", 22);
+    }
+
+    Personal2(String n) {
+        this(n, 30);
+    }
+
+    void info() {
+        System.out.printf("Имя: %s. Возраст: %d.\n", name, age);
     }
 }
 
