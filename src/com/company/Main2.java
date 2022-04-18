@@ -2,6 +2,8 @@ package com.company;
 
 import java.util.Scanner;
 //import java.util.*; // импорт всех классов из пакета java.util
+import com.company3.Persona2;
+import com.company3.Persona2.*;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -687,6 +689,11 @@ public class Main2 {
 
         Personal2 cris = new Personal2("Cris", 27);
         cris.info();
+        System.out.println();
+
+        Persona2 jack = new Persona2("Jack", 28); // класс из другого пакета
+        jack.inf();
+
     }
     static void hello() {
         System.out.println("Hello!");

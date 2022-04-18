@@ -18,7 +18,7 @@ public class Main3 {
         out.printf("%.2f", a1); // System. - можно не писать, из-за операции статического импорта
     }
 }
-class Persona {
+class Persona { /*нельзя использовать в других пакетах, класс не public, а public может быть только один!*/
     String name;
     int age;
 
@@ -27,7 +27,7 @@ class Persona {
         age = 19;
     }
 
-    Persona() {
+    protected Persona() {
 
     }
 
