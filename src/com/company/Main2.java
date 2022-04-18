@@ -1,8 +1,16 @@
 package com.company;
+
 import java.util.Scanner;
+//import java.util.*; // импорт всех классов из пакета java.util
 
 public class Main2 {
     public static void main(String[] args) {
+//        java.util.Scanner in = new java.util.Scanner(System.in);
+//        Scanner in = new Scanner(System.in);
+//        java.util.Date utilDate = new java.util.Date();
+//        java.sql.Date sqlDate = new java.sql.Date();
+        /* два класса Date имеются в двух разных пакетах java.util. и java.sql., что бы их использовать нужно
+        указывать полный путь к этим классам, по примеру сканера*/
         System.out.println("Hello world!");
         int a1,b1; /*объявление переменной*/
 //        есть ещё byte, short, long, для целочисленных значений
@@ -57,7 +65,7 @@ public class Main2 {
 
 //        Scaner, ввод значений
         Scanner in = new Scanner(System.in); /*пишется один раз,
-         in(перед равно) используется и в последющих операциях ввода,
+         in(перед равно) используется и в последующих операциях ввода,
          это имя вводимой переменной которую мы вводим с консоли*/
         /*System.out.print("Введите имя: ");
         String f1= in.nextLine(); // момент ввода с консоли, in это имя вводимой переменной
