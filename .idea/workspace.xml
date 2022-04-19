@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company3/Persona2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company2/Main3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company2/Main3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company2/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company2/Persona.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company2/Main3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company2/Main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company3/Persona2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company3/Persona2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Application.Main2">
     <configuration name="Main2" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -120,5 +121,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="11" />
     <option name="LAST_COMMIT_MESSAGE" value="11" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

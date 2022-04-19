@@ -1,4 +1,5 @@
 package com.company2;
+import static com.company.Main2.*; // статические методы нужно импортировать через import static!
 import static java.lang.System.*; // статический импорт
 import static java.lang.Math.*; // пакет java.lang подключён автоматически
 public class Main3 {
@@ -15,7 +16,8 @@ public class Main3 {
 //        double a1 = Math.sqrt(26);
         double a1 = sqrt(17); // Math. - можно не писать, из-за операции статического импорта и того что Math
         // статический метод
-        out.printf("%.2f", a1); // System. - можно не писать, из-за операции статического импорта
+        out.printf("%.2f\n", a1); // System. - можно не писать, из-за операции статического импорта
+        hello();
     }
 }
 class Persona { /*нельзя использовать в других пакетах, класс не public, а public может быть только один!*/
@@ -27,9 +29,7 @@ class Persona { /*нельзя использовать в других паке
         age = 19;
     }
 
-    protected Persona() {
-
-    }
+    Persona() {    }
 
     Persona(String n, int g) {
         name=n;

@@ -1,6 +1,6 @@
 package com.company3;
 
-public class Persona2 {
+public class Persona2 { // класс можно импортировать в другие пакеты
     String name;
     int age;
 
@@ -9,9 +9,7 @@ public class Persona2 {
         age = 19;
     }
 
-    public Persona2() {
-
-    }
+    public Persona2() {    }
 
     public Persona2(String n, int g) {
         name=n;
