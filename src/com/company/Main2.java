@@ -608,6 +608,7 @@ public class Main2 {
         sum_all("Сумма чисел: 6,9,7,4,1,5,8 = ",6,9,7,4,1,5,8);
         int k10=sum2(5,9,6);
         System.out.println(k10);
+        System.out.println(sum2(5,8,9));
         System.out.println(day(9));
         System.out.println(day(15));
         dayt(56);
@@ -689,8 +690,33 @@ public class Main2 {
         cris.info();
         System.out.println();
 
-        Persona2 jack = new Persona2("Jack", 28); // класс из другого пакета
+        Persona2 jack = new Persona2("Jack", 28); // класс импортирован из пакета com.company3
         jack.inf();
+        System.out.println();
+
+        Person polin = new Person();
+        polin.info();
+
+        Person polina = new Person("Polina", 26, "Rechica", "+375559845327");
+        polina.info();
+        polina.info_name();
+        polina.info_age();
+        polina.info_adress();
+        polina.info_phone();
+
+        // Инкапсуляция - ограничение доступа к данным, с помощью модификаторов. Сокрытие данных внутри области.
+        Pers2 sato = new Pers2("Sato", 111);
+        sato.info();
+//        sato.age=20; // нельзя задать значение, потому что поле с модификатором private
+
+        Pers gats = new Pers("Gats",110);
+        System.out.println(gats.getAge()); // геттер для вывода значений
+        gats.setAge(30); // сеттер для ввода значений
+        System.out.println(gats.getAge());
+        gats.setName("Gatss");
+        System.out.println(gats.getName());
+        Pers gats2 = new Pers(); // Новый конструктор, новый объект
+        gats2.info();
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -804,25 +830,25 @@ public class Main2 {
 }
 // Ооп
 class Personal {
-    String name; // поле класса
-    int age; // поле класса
+    String name; // поле класса, определяет состояние класса
+    int age; // поле класса, хранит данные
 
-    Personal() {
+    Personal() { // конструктор
         name = "Общий";
         age = 18;
     }
 
-    Personal(int g) {
+    Personal(int g) { // конструктор
         name = "Общий";
         age = g;
     }
 
-    Personal(String n, int g) {
+    Personal(String n, int g) { // конструктор
         name = n;
         age = g;
     }
 
-    void info() {
+    void info() { // метод, определяет поведение класса
         System.out.printf("Имя: %s. Возраст: %d.\n", name, age);
     }
 }
@@ -831,29 +857,119 @@ class Personal2 {
     String name; // поле класса
     int age; // поле класса
 
-    {
+    { // инициализатор
         name = "Все";
         age = 22;
     }
 
     Personal2(String n, int g) {
         this.name=n; // параметр n присваивается полю name
-        this.age=g;
+        age=g; // можно и без this
     }
 
     Personal2() {
-//        this("Все", 22);
+//        this("jgdgn", 65); // обращаемся к Personal2(String n, int g)
     }
 
     Personal2(String n) {
-        this(n, 30);
+        name=n;
+//        this.name=n;
+//        this("jgnk", 52);
     }
 
     void info() {
         System.out.printf("Имя: %s. Возраст: %d.\n", name, age);
     }
 }
+class Person {
+    String name;
+    public int age; // доступен в дргих пакетах
+    protected String adress;
+    /*private*/ String phone; // private - доступен только в классе где был создан
 
+    Person (String n, int a, String dr, String p) {
+        name=n;
+        age=a;
+        adress=dr;
+        phone=p;
+    }
+
+    Person () {
+//        this("sfn", 56, "jfn", "fkmg");
+    }
+
+    void info() {
+        System.out.printf("Имя: %s. Возраст: %d. Адрес: %s. Номер телефона: %s.\n", name, age, adress, phone);
+    }
+
+    void info_name() {
+        System.out.printf("Имя: %s.\n", name);
+    }
+
+    public void info_age() { // доступен в дргих пакетах
+        System.out.printf("Возраст: %d.\n", age);
+    }
+
+    protected void info_adress() {
+        System.out.printf("Адрес: %s.\n", adress);
+    }
+
+    /*private*/ void info_phone() { // private - доступен только в классе где был создан
+        System.out.printf("Номер телефона: %s.\n", phone);
+    }
+}
+// Инкапсуляция
+/* Использование сеттеров и геттеров для изменения или вывода значений полей с модификатором private.
+Для ограничения доступа к полю из других классов.*/
+class Pers {
+    private String name;
+    private int age = 1;
+
+    public void setName(String m) {
+        this.name = m;
+    }
+
+    public void setAge(int e) {
+        if (e >0 && e <110) {
+            this.age = e;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    Pers(String n, int g) {
+        setName(n);
+        setAge(g);
+    }
+
+    Pers () {    }
+
+    void info() {
+        System.out.printf("%s %d\n", name, age);
+    }
+}
+// то же без инкапсуляции
+class Pers2 {
+    private String name;
+    private int age;
+
+    public Pers2(String n, int g) {
+        name=n;
+        if (g > 0 && g < 110){
+            age = g;
+        }
+    }
+
+    public void info() {
+        System.out.println(name+" "+age);
+    }
+}
 
 
 
