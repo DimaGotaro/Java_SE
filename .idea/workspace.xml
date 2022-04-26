@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pers2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pers2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Personal2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company2/Main3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company2/Main3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

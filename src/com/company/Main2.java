@@ -4,14 +4,35 @@ import java.util.Scanner;
 import com.company3.Persona2; // импортирован из другого пакета
 
 public class Main2 {
+    int a=1;
+    static int b=2;
+    static void b(){
+//        System.out.println(a); // только static!
+        System.out.println(b);
+    }
+    void a() {
+        System.out.println(a);
+        System.out.println(b);
+        Main2.b();
+    }
+    void c() {
+        a();
+        Main2.b();
+    }
     public static void main(String[] args) {
+//        System.out.println(a); // не можем использовать, потому что a не static, так же и с методами
+        System.out.println(b);
+        Main2.b(); // можем использовать, потому что поле и метод static
 //        java.util.Scanner in = new java.util.Scanner(System.in);
 //        Scanner in = new Scanner(System.in);
 //        java.util.Date utilDate = new java.util.Date();
 //        java.sql.Date sqlDate = new java.sql.Date();
         /* два класса Date имеются в двух разных пакетах java.util. и java.sql., что бы их использовать нужно
         указывать полный путь к этим классам, по примеру сканера*/
+
+        // Начало
         System.out.println("Hello world!");
+        /* System - класс, out - статическая переменная, println - метод*/
         int a1,b1; /*объявление переменной*/
 //        есть ещё byte, short, long, для целочисленных значений
         a1=2; /*присвоение значения*/
@@ -717,6 +738,54 @@ public class Main2 {
         System.out.println(gats.getName());
         Pers gats2 = new Pers(); // Новый конструктор, новый объект
         gats2.info();
+        System.out.println();
+
+        // static поля, можем вызывать без объекта класса, через сам класс
+        System.out.println(Count.con);
+        Count cv = new Count();
+        cv.info();
+        Count cv2 = new Count();
+        cv2.info();
+        Count.con = 5; // изменяем статическое поле, во всём классе Count
+        // статическая переменная - общая переменная для всех классов
+        Count cv3 = new Count();
+        cv3.info();
+        Count cv4 = new Count();
+        cv4.info();
+        System.out.println("con = "+Count.con);
+        System.out.println();
+        /* System - класс, out - статическая переменная, println - метод*/
+
+        // static константа
+        double radius = 30;
+        System.out.println(radius*Count.pi);
+//        Count.pi+=1; // не можем изменить - константа(final)
+        System.out.println();
+
+        // static инициализатор
+        Count2 cb = new Count2();
+        cb.info();
+        Count2 cb2 = new Count2();
+        cb2.info();
+        Count2.con = 105;
+        Count2 cb3 = new Count2();
+        cb3.info();
+        System.out.println();
+
+        // static метод, то же через класс, без объекта. Только статические переменные
+        Count3.info_con();
+        Count3 ch = new Count3();
+        ch.info_id();
+        Count3.info_con();
+        Count3 ch2 = new Count3();
+        ch2.info_id();
+        Count3.info_con();
+        System.out.println();
+
+        // статические методы могут быть вызваны без создания объекта
+        System.out.println(Count4.sum(5,7));
+        System.out.println(Count4.sum_v(5,7));
+        System.out.println(Count4.umn(5,7));
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -857,9 +926,10 @@ class Personal2 {
     String name; // поле класса
     int age; // поле класса
 
-    { // инициализатор
+    { // инициализатор, выполняется один раз до создания объекта
         name = "Все";
         age = 22;
+        System.out.println("Инициализация");
     }
 
     Personal2(String n, int g) {
@@ -936,7 +1006,9 @@ class Pers {
     }
 
     public String getName() {
-        return name;
+        String sb = name; // интересный трюк для полной неизменяемости геттера. Если геттер(sb) изменить,
+        // ему всё равно присвоится значение поля(name)
+        return sb;
     }
 
     public int getAge() {
@@ -968,6 +1040,69 @@ class Pers2 {
 
     public void info() {
         System.out.println(name+" "+age);
+    }
+}
+class Count {
+    private int id;
+    static int con = 1; // статическая переменная, можем использовать без объекта класса,
+    // обращаясь к классу, а не к объекту
+    public static final double pi = 3.14; // final - константа, не можем изменить
+
+    Count () {
+        id = con++;
+    }
+
+    public void info() {
+        System.out.println("id = "+id);
+    }
+}
+
+class Count2 {
+    private int id;
+    static int con;
+
+    static { // выполняется один раз до создания объекта. Для статических полей(static)
+        con = 102;
+        System.out.println("Инициализация");
+    }
+
+    Count2 () {
+        id = con++;
+        System.out.println("Конструктор");
+    }
+
+    public void info() {
+        System.out.println("id = "+id);
+    }
+}
+class Count3 {
+    private int id;
+    private static int con = 1;
+
+    Count3() {
+        id = con++;
+        System.out.println("Конструктор");
+    }
+
+    public static void info_con() {
+        System.out.println("con = "+con);
+    }
+
+    public void info_id() {
+        System.out.println("id = "+id);
+    }
+}
+class Count4 {
+    static int sum(int a, int b) {
+        return a+b;
+    }
+
+    static int sum_v(int a, int b) {
+        return a-b;
+    }
+
+    static int umn(int a, int b) {
+        return a*b;
     }
 }
 
