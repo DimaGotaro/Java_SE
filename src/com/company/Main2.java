@@ -4,26 +4,8 @@ import java.util.Scanner;
 import com.company3.Persona2; // импортирован из другого пакета
 
 public class Main2 {
-    int a=1;
-    static int b=2;
-    static void b(){
-//        System.out.println(a); // только static!
-        System.out.println(b);
-    }
-    void a() {
-        System.out.println(a);
-        System.out.println(b);
-        Main2.b();
-    }
-    void c() {
-        a();
-        Main2.b();
-    }
     public static void main(String[] args) {
-//        System.out.println(a); // не можем использовать, потому что a не static, так же и с методами
-        System.out.println(b);
-        Main2.b(); // можем использовать, потому что поле и метод static
-//        java.util.Scanner in = new java.util.Scanner(System.in);
+//        java.util.Scanner in = new java.util.Scanner(System.in); // полный адрес сканера
 //        Scanner in = new Scanner(System.in);
 //        java.util.Date utilDate = new java.util.Date();
 //        java.sql.Date sqlDate = new java.sql.Date();
