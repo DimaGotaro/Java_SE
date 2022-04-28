@@ -768,6 +768,44 @@ public class Main2 {
         System.out.println(Count4.sum(5,7));
         System.out.println(Count4.sum_v(5,7));
         System.out.println(Count4.umn(5,7));
+        System.out.println();
+
+        // Объекты как параметры методов
+        Param nat = new Param("Натали");
+        System.out.println(nat.getName());
+        changeName(nat);
+        System.out.println(nat.getName());
+        // переменная kate и параметр p метода changeName будут указывать на один и тот же объект в памяти,
+        // новый объект не создавался!
+        // то же, через объект
+//        nat.setName("Натали.через объект");
+//        System.out.println(nat.getName());
+        changeH(nat);
+        System.out.println(nat.getName()); // nat.name не изменён, потому что h теперь не параметр, а объект
+        System.out.println();
+
+        // Внутренние и вложенные классы
+        Intro nm = new Intro("Bob", "1234");
+        nm.info_Intro();
+        nm.account.info_Passw();
+        Intro2 nm3 = new Intro2("Сюзанна");
+        nm3.info_1("4321");
+        // пример с факториалом
+        Intro3.Fact nm4 = Intro3.getFact(6); // объект создаётся в методе Intro3.getFact()
+        // здесь Intro3.getFact() это - new Fact(c, d), которы в сою очередь является - new Fact(int y, int x)
+        System.out.printf("Факториал числа %d, равен: %d\n", nm4.getB(), nm4.getA());
+        System.out.println();
+
+        // Наследование
+        Nacl ff = new Nacl("Накл"); // Объект родительского класса
+        ff.info(); // метод родительского класса, ниже будет переопределён
+        Emporio ff2 = new Emporio("Ива-сан"); // объект наследуемого класса
+        ff2.info(); // метод из родительского класса
+        Emporio ff3 = new Emporio("Зурема", "Кича");
+        ff3.info_all();
+        System.out.println();
+        ff3.info(); // переопределённый метод в наследуемом классе, с добавлением изначального метода
+        // Динамическая диспетчеризация методов, объект Emporio является в то же время и объектом Nacl
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -877,6 +915,15 @@ public class Main2 {
         else {
             return fib(m-1)+fib(m-2);
         }
+    }
+    static void changeName(Param h) { // h - это параметр, не объект. В памяти то же место, что и у kate
+        h.setName("Натали.h");
+    }
+    static void changeH(Param h) {
+        h = new Param(" 2Наташа"); // h - создан объект класса Param
+        System.out.println(h.getName());
+        h.setName(" 2Наташа.h"); // изменено поле name в объекте h
+        System.out.println(h.getName());
     }
 }
 // Ооп
@@ -1087,7 +1134,134 @@ class Count4 {
         return a*b;
     }
 }
+class Param {
+    private String name;
 
+    Param (String name) {
+        this.name=name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+class Intro { /* обращение к переменной внутреннего класса через объект этого класса,
+ обращение переменных между внутренним и внешним классами.
+  Внутренний класс(Passw) ведет себя как обычный класс за тем исключением,
+  что его объекты могут быть созданы только внутри внешнего класса(Intro).*/
+    private String name; // достп к полям между внутр и внешн классами разрешён, да же с private
+    Passw account;
+
+    Intro (String name, String pass) {
+        this.name=name;
+        account = new Passw(pass); // можно создать только в первом внешнем классе
+    }
+
+    void info_Intro() {
+        System.out.printf("Intro name: %s. Password: %s\n", name, account.password/* обращение к перем внутр класса*/);
+    }
+
+    public class Passw {
+        private String password;
+
+        Passw (String pass2) {
+            this.password = pass2;
+        }
+
+        void info_Passw() {
+            System.out.printf("Passw name: %s. Password: %s\n", Intro.this.name/*обр к перем внешн класса*/, password);
+        }
+    }
+}
+class Intro2 {
+    private String name;
+
+    Intro2 (String name) {
+        this.name=name;
+    }
+
+    public void info_1(String password) {
+        class Passw2 {
+            void info_2() {
+                System.out.printf("Passw2 name: %s. Password: %s\n", Intro2.this.name, password);
+            }
+        }
+        Passw2 nm2 = new Passw2();
+        nm2.info_2();
+    }
+}
+class Intro3 {
+    public static class Fact {
+        private int a;
+        private int b;
+
+        Fact(int y, int x) {
+            a = y;
+            b = x;
+        }
+
+        public int getA() {
+            return a;
+        }
+
+        public int getB() {
+            return b;
+        }
+    }
+    public static Fact getFact(int d) { // тип Fact для того чтобы, вернуть значения c и x в объект класса Fact(nm4)
+        // и его конструктор. Объекты и методы класса по сути это его конструкторы
+        int c = 1;
+        for (int i=1; i<=d; i++) {
+            c *= i;
+        }
+        return new Fact(c, d); // создание и возвращение в объект класса Fact(nm4) соответствующему конструктору
+    }
+}
+// Наследование. Наследуемые классы не имеют доступа к полям private
+/*final*/ class Nacl { // final запрещает наследование классов, при создании Emporio была бы ошибка
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Nacl(String name) {
+        this.name = name;
+    }
+
+    public /*final*/ void info() { // final запрещает наследование методов
+        System.out.printf("Имя: %s\n", name);
+    }
+}
+class Emporio extends Nacl { // Emporio(наследник) наследует Nacl(родитель), наследует все те же поля и методы,
+    // а конструкторы нужно вызывать
+    private String comp;
+
+    Emporio(String name) {
+        super(name); // обращение к переменной из родительского класса
+    }
+
+    Emporio(String name, String comp) { // если базовый класс определяет конструктор,
+        // то производный класс должен его вызвать
+        super(name);
+        this.comp = comp;
+    }
+
+    public void info_all() {
+        System.out.printf("Имя: %s, Компания: %s\n", getName(), comp);
+    }
+
+    // переопределение метода
+    @Override
+    public void info() {
+        super.info(); // добавили метод из базового класса с помощью super
+        System.out.printf("Компания: %s\n", comp);
+    }
+}
 
 
 
