@@ -800,12 +800,28 @@ public class Main2 {
         Nacl ff = new Nacl("Накл"); // Объект родительского класса
         ff.info(); // метод родительского класса, ниже будет переопределён
         Emporio ff2 = new Emporio("Ива-сан"); // объект наследуемого класса
-        ff2.info(); // метод из родительского класса
+        ff2.info(); // метод переопределён, null потому что comp не определена
         Emporio ff3 = new Emporio("Зурема", "Кича");
         ff3.info_all();
         System.out.println();
         ff3.info(); // переопределённый метод в наследуемом классе, с добавлением изначального метода
         // Динамическая диспетчеризация методов, объект Emporio является в то же время и объектом Nacl
+        Nacl ff4 = new Emporio("Ельцин", "Магадан");
+        ff4.info();
+//        ff4.info_all(); // не переопределённые методы из подкласса использовать нельзя,
+        System.out.println(ff4.getName()); // а из родительского класса можно
+//        При вызове переопределенного метода виртуальная машина динамически находит и
+//        вызывает именно ту версию метода, которая определена в подклассе
+        System.out.println();
+
+        // Абстрактные классы. Нельзя создать объект
+        Bank kaito = new Bank("Кайто", "Охотникпромбанк");
+        kaito.info_Obstr();
+        Client gin = new Client("Джин", "Охотникпромбанк");
+        gin.info_Obstr();
+        Vichisl fd = new Vichisl(5.48f, 8.69f, 89.21f, 23.12f);
+        System.out.printf("Периметр = %.2f\n", fd.perim());
+        System.out.printf("Площадь = %.2f\n", fd.plosha());
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -1260,6 +1276,88 @@ class Emporio extends Nacl { // Emporio(наследник) наследует N
     public void info() {
         super.info(); // добавили метод из базового класса с помощью super
         System.out.printf("Компания: %s\n", comp);
+    }
+}
+abstract class Obstr { // если есть абстр метод то, класс, то же должен быть абстрактным
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Obstr(String name) { // нужен в абстр методе, без него ошибка с super
+        this.name = name;
+    }
+
+    public abstract void info_Obstr(); // у абстрактных методов нет реализации(тела"{}")
+}
+class Bank extends Obstr {
+
+    private String bank;
+
+    public Bank (String name, String bank) {
+        super(name);
+        this.bank = bank;
+    }
+
+    public void info_Obstr() {
+        System.out.printf("Имя сотрудника: %s. Банк: %s\n", super.getName(), bank);
+    }
+}
+class Client extends Obstr {
+
+    private String bank;
+
+    public Client (String name, String bank) {
+        super(name);
+        this.bank = bank;
+    }
+
+    public void info_Obstr() {
+        System.out.printf("Имя клиента: %s. Банк: %s\n", super.getName(), bank);
+    }
+}
+abstract class Figyre {
+    private float x;
+    private float y;
+
+    Figyre (float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public abstract float perim();
+
+    public abstract float plosha();
+}
+class Vichisl extends Figyre {
+    private float a;
+    private float b;
+
+    public Vichisl(float x, float y, float a, float b) {
+        super(x, y);
+        this.a = a;
+        this.b = b;
+        System.out.printf("x = %.2f, y = %.2f\n", super.getX(), super.getY());
+    }
+
+    @Override
+    public float perim() {
+        return (a*2)+(b*2);
+    }
+
+    @Override
+    public float plosha() {
+        return a*b;
     }
 }
 
