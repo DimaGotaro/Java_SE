@@ -1,4 +1,5 @@
 package com.company;
+import java.awt.*;
 import java.util.Scanner;
 //import java.util.*; // импорт всех классов из пакета java.util
 import com.company3.Persona2; // импортирован из другого пакета
@@ -884,6 +885,54 @@ public class Main2 {
         System.out.println(((Table)hh).getName()); // Table hh = new Table(), через преобразование типов можем
 //        String bb = ((Table)hh).getName(); // то же самое, только через переменную
 //        System.out.println(hh);
+        Print.print_stat();
+        Writl rj = new Britl();
+        System.out.println(rj.sum2(2, 5));
+        System.out.println(rj.sum3(2, 5, 3));
+        Tehnik rj2 = new Tehnik_V();
+        System.out.println();
+        rj2.vibor(5);
+        System.out.println();
+        Dora.Biba rj3 = new Boba("Биба и Боба"); // Dora.Biba - вложенный интерфейс
+        rj3.inf();
+        param(new Name2("Приблуда"));
+        param(new Book2("Алые паруса", "Андерсен"));
+        Grogu lr = param2("Ктулху", false);
+        lr.vivod();
+        Grogu lr2 = param2("Громовержец", true);
+        lr2.vivod();
+        // преобразование типа пременной lr из типа Grogu в Name2
+        System.out.println(((Name2)lr).getName()); // геттер можно использовать только если у переменной тип Name2
+        System.out.println();
+
+        // Интерфейсы в механизме обратного вызова
+        Click as = new Click(new Button_deistv());
+        as.click();
+        as.click();
+        Click as2 = new Click(new Button_int() { // создание анонимного объекта интерфейса.
+            // Реализация анонимного объекта интерфейса
+            boolean x = true;
+            @Override
+            public void deistv() {
+                if (x) {
+                    System.out.println("Телевизор включён!");
+                    x=false; // переключение переменной x, была true, стала false
+                }
+                else {
+                    System.out.println("Телевизор выключен!");
+                    x=true;
+                }
+            }
+        });
+        Click as3 = new Click(new Button_int() {
+            @Override
+            public void deistv() {
+                System.out.println("Печать началась!");
+            }
+        });
+        as2.click();
+        as3.click();
+        as2.click();
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -1002,6 +1051,17 @@ public class Main2 {
         System.out.println(h.getName());
         h.setName(" 2Наташа.h"); // изменено поле name в объекте h
         System.out.println(h.getName());
+    }
+    static void param(Grogu gt) {
+        gt.vivod();
+    }
+    public static Grogu param2(String name, boolean j) {
+        if (j) {
+            return new Book2(name, "Неопределено");
+        }
+        else {
+            return new Name2(name);
+        }
     }
 }
 // Ооп
@@ -1290,7 +1350,7 @@ class Intro3 {
             return b;
         }
     }
-    public static Fact getFact(int d) { // тип Fact для того чтобы, вернуть значения c и x в объект класса Fact(nm4)
+    public static Fact getFact(int d) { // тип Fact для того чтобы, вернуть значения c и d в объект класса Fact(nm4)
         // и его конструктор. Объекты и методы класса по сути это его конструкторы
         int c = 1;
         for (int i=1; i<=d; i++) {
@@ -1493,12 +1553,15 @@ class Client2 extends Human {
     }
 }
 // Интерфейсы. Нельзя создавать объекты.
-// Методы интерфейса не имеют модификаторов доступа, по умолчанию доступ public.
+// Методы интерфейса не имеют модификаторов доступа, кроме private, по умолчанию доступ public.
 // Константы и методы могут не иметь реализации.
 interface Print {
     void print(); // метод без реализаций, должны реализовать в наследуемых классах
     default void print_def() { // не должны реализовывать в наследуемых классах, можем если нужно
         System.out.println("Метод по умолчанию");
+    }
+    static void print_stat() {
+        System.out.println("Статический метод");
     }
 }
 abstract class Bucha implements Print { // методы определяем какие хотим, можем не реализовывать методы интерфейса
@@ -1544,6 +1607,135 @@ class Table implements Print {
         System.out.printf("Имя_table: %s\n", name);
     }
 }
+interface Writl {
+    default int sum3(int a1, int a2, int a3) {
+        return sum_all(a1, a2, a3); // используем приватный метод, через метод по умолчанию у которого public
+    }
+    default int sum2(int a1, int a2) {
+        return sum_all(a1, a2);
+    }
+    private int sum_all(int ...sum) {
+        int result = 0;
+        for (int i:
+             sum) {
+            result+=i;
+        }
+        return result;
+    }
+}
+class Britl implements Writl { // создаём класс, что бы создать объект, в интерфейсе нельзя
+
+}
+interface Tehnik {
+    int A = 0; // константа, по умолчанию public static final
+    int B = 1;
+
+    void vibor(int n);
+}
+class Tehnik_V implements Tehnik {
+    public void vibor(int n) { // метод должен быть переопределён от метода в интерфейсе, иначе ошибка
+        if (n==A) {
+            System.out.println("Вы проиграли! Идите нахуй!");
+        }
+        else if (n==B) {
+            System.out.println("Вы выиграли! Вы потрясающий!");
+        }
+        else {
+            System.out.println("Введите 0 или 1");
+        }
+    }
+}
+//class All implements Tehnik, Print, Writl { } // несколько интерфейсов применяются через запятую
+interface All2 extends Tehnik { // наследование интерфейсов
+    void viborv();
+}
+class Dura implements All2, Tehnik { // в классе нужно будет реализовать методы всех используемых интерфейсов
+    @Override
+    public void vibor(int n) {
+
+    }
+    @Override
+    public void viborv() {
+
+    }
+}
+class Dora {
+    interface Biba { // вложенный интерфейс
+        void inf();
+    }
+}
+class Boba implements Dora.Biba { // адресс вложенного интерфейса Dora.Biba
+    String name;
+
+    Boba(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void inf() {
+        System.out.println(name);
+    }
+}
+interface Grogu {
+    void vivod();
+}
+class Book2 implements Grogu {
+    private String book;
+    private String autor;
+
+    public Book2(String book, String autor) {
+        this.book = book;
+        this.autor = autor;
+    }
+
+    @Override
+    public void vivod() {
+        System.out.printf("Название книги: %s, Автор: %s\n", book, autor);
+    }
+}
+class Name2 implements Grogu {
+    private String name;
+
+    public Name2(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void vivod() {
+        System.out.printf("Имя персонажа: %s\n", name);
+    }
+}
+interface Button_int {
+    void deistv();
+}
+class Button_deistv implements Button_int {
+    @Override
+    public void deistv() {
+        System.out.println("Кнопка нажата!");
+    }
+}
+class Click{
+    Button_int x;
+
+    public Click(Button_int x) {
+        this.x = x;
+    }
+
+    public void click() {
+        x.deistv();
+    }
+}
+
+
+
+
+
+
+
 
 
 
