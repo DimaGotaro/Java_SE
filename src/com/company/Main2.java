@@ -815,13 +815,75 @@ public class Main2 {
         System.out.println();
 
         // Абстрактные классы. Нельзя создать объект
-        Bank kaito = new Bank("Кайто", "Охотникпромбанк");
+        Company kaito = new Company("Кайто", "Ассоциация охотников");
         kaito.info_Obstr();
-        Client gin = new Client("Джин", "Охотникпромбанк");
+        Client gin = new Client("Джин", "Охотникпромбанк", 500_000);
         gin.info_Obstr();
         Vichisl fd = new Vichisl(5.48f, 8.69f, 89.21f, 23.12f);
         System.out.printf("Периметр = %.2f\n", fd.perim());
         System.out.printf("Площадь = %.2f\n", fd.plosha());
+        System.out.println();
+
+        // Иерархия наследования и преобразование типов
+        // Восходящее преобразование. Object - Human |            (upcasting)
+        //                                  Company2 - Client2
+        Human dd = new Human("Дядя пёс");
+        dd.info_Human();
+        Human dd2 = new Company2("Пэтка", "Стройблядмонтаж");
+        dd2.info_Human();
+        Human dd3 = new Client2("Бобёр", "Плотинаинвестиции", 500);
+        dd3.info_Human();
+        Object dd4 = new Human("Котопёс_Obj"); // класс Object стоит выше Human и Human наследует Object неявно
+//        dd4.info_Human(); // error, не можем использовать методы через тип Object
+        Object dd5 = new Company2("Пэтка_Obj", "Стройблядмонтаж_Obj");
+        Object dd6 = new Client2("Бобёр_Obj", "Плотинаинвестиции_Obj", 501);
+        Human db = (Human) dd4; // downcasting - нисходящее преобразование от Object к типу Human,
+        // переменная dd4 приводится к типу Human и приравнивается к переменной db
+        db.info_Human(); // теперь можем использовать методы
+//        ((Human)dd4).info_Human(); // так написать проще, Human dd4 = new Human
+        ((Client2)dd6).info_Human(); // упрощенное преобразование, Client2 dd6 = new Client2
+//        ((Human)dd5).info_Human(); // Human dd5 = new Company2
+        ((Company2)dd5).info_Human(); // Company2 dd5 = new Company2
+//        ((Client2)dd5).info_Human(); // Client2 dd5 = new Company2, ошибка! dd5 не представляет тип Client2
+        if (dd6 instanceof Company2) { // Company2 dd6 = new Client2 - ошибка!
+            Company2 db2 = (Company2)dd6;
+            System.out.println("Всё получилось! поздравляем!");
+        }
+        else {
+            System.out.println("Иди нахуй!(конверсия недействительна)");
+        }
+
+        if (dd6 instanceof Human) { // Human dd6 = new Client2
+            System.out.println("Всё получилось! поздравляем!");
+            ((Human)dd6).info_Human();
+        }
+        else {
+            System.out.println("Иди нахуй!(конверсия недействительна)");
+        }
+
+        if (dd5 instanceof Human db3) { // Human dd5 = new Company2, создана переменная db3 типа Human
+            System.out.println("Всё получилось! поздравляем!");
+            db3.info_Human();
+        }
+        else {
+            System.out.println("Иди нахуй!(конверсия недействительна)");
+        }
+        System.out.println();
+
+        // Интерфейсы. Нельзя создавать объекты.
+        Book gg = new Book("Суперпозиция","Вент");
+        gg.print();
+        gg.print_def(); // метод по умолчанию класса Print, можем вызывать из Book и из Print
+        System.out.println(gg.getBook());
+        Print hh = new Book("Мы", "Замятин"); // Object - Print |
+        hh.print();                                                 // Book - Table
+        hh = new Table("Шошанна");
+        hh.print();
+        hh.print_def(); // метод по умолчанию класса Print
+//        hh.getName(); // ошибка, нельзя использовать не переопределённый метод, его нет в интерфейсе Print
+        System.out.println(((Table)hh).getName()); // Table hh = new Table(), через преобразование типов можем
+//        String bb = ((Table)hh).getName(); // то же самое, только через переменную
+//        System.out.println(hh);
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -1292,30 +1354,44 @@ abstract class Obstr { // если есть абстр метод то, клас
 
     public abstract void info_Obstr(); // у абстрактных методов нет реализации(тела"{}")
 }
-class Bank extends Obstr {
+class Company extends Obstr { // должен реализовать все методы абстрактного класса
 
-    private String bank;
+    private String company;
 
-    public Bank (String name, String bank) {
+    public Company (String name, String company) {
         super(name);
-        this.bank = bank;
+        this.company = company;
     }
 
     public void info_Obstr() {
-        System.out.printf("Имя сотрудника: %s. Банк: %s\n", super.getName(), bank);
+        System.out.printf("Имя сотрудника: %s. Компания: %s\n", super.getName(), company);
+    }
+
+    public String getCompany() {
+        return company;
     }
 }
 class Client extends Obstr {
 
     private String bank;
+    private int sum;
 
-    public Client (String name, String bank) {
+    public Client (String name, String bank, int sum) {
         super(name);
         this.bank = bank;
+        this.sum = sum;
     }
 
     public void info_Obstr() {
-        System.out.printf("Имя клиента: %s. Банк: %s\n", super.getName(), bank);
+        System.out.printf("Имя клиента: %s. Банк: %s. Сумма вклада: %d\n", super.getName(), bank, sum);
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public String getBank() {
+        return bank;
     }
 }
 abstract class Figyre {
@@ -1358,6 +1434,114 @@ class Vichisl extends Figyre {
     @Override
     public float plosha() {
         return a*b;
+    }
+}
+class Human {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public void info_Human() {
+        System.out.printf("Имя: %s\n", name);
+    }
+}
+class Company2 extends Human {
+
+    private String company;
+
+    public Company2 (String name, String company) {
+        super(name);
+        this.company = company;
+    }
+
+    public void info_Human() {
+        System.out.printf("Имя сотрудника: %s. Компания: %s\n", super.getName(), company);
+    }
+
+    public String getCompany() {
+        return company;
+    }
+}
+class Client2 extends Human {
+
+    private String bank;
+    private int sum;
+
+    public Client2 (String name, String bank, int sum) {
+        super(name);
+        this.bank = bank;
+        this.sum = sum;
+    }
+
+    public void info_Human() {
+        System.out.printf("Имя клиента: %s. Банк: %s. Сумма вклада: %d\n", super.getName(), bank, sum);
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public String getBank() {
+        return bank;
+    }
+}
+// Интерфейсы. Нельзя создавать объекты.
+// Методы интерфейса не имеют модификаторов доступа, по умолчанию доступ public.
+// Константы и методы могут не иметь реализации.
+interface Print {
+    void print(); // метод без реализаций, должны реализовать в наследуемых классах
+    default void print_def() { // не должны реализовывать в наследуемых классах, можем если нужно
+        System.out.println("Метод по умолчанию");
+    }
+}
+abstract class Bucha implements Print { // методы определяем какие хотим, можем не реализовывать методы интерфейса
+    abstract void maka(); // должны реализовать в наследуемых классах
+    abstract void maka2(); //должны реализовать в наследуемых классах
+}
+class Bucha2 extends Bucha { // наследуемый класс от абстрактного Bucha, который применяет интерфейс Print.
+    // Должны реализовать методы и интерфейса и абстрактного класса
+    public void maka() {    }
+    public void maka2() {    }
+    public void print() {    }
+}
+class Book implements Print { // должен реализовать все методы интерфейса
+    String book;
+    String autor;
+
+    Book(String book, String autor) {
+        this.book = book;
+        this.autor = autor;
+    }
+
+    public String getBook() { return book; }
+    public String getAutor() { return autor; }
+
+    @Override
+    public void print() {
+        System.out.printf("Название книги: %s. Автор: %s\n", book, autor);
+    }
+}
+class Table implements Print {
+    private String name;
+
+    public Table(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void print() {
+        System.out.printf("Имя_table: %s\n", name);
     }
 }
 
