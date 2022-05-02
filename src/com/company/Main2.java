@@ -797,7 +797,7 @@ public class Main2 {
         System.out.printf("Факториал числа %d, равен: %d\n", nm4.getB(), nm4.getA());
         System.out.println();
 
-        // Наследование
+        // Наследование. Можем использовать поля и методы родительского класса через объект наследуемого класса
         Nacl ff = new Nacl("Накл"); // Объект родительского класса
         ff.info(); // метод родительского класса, ниже будет переопределён
         Emporio ff2 = new Emporio("Ива-сан"); // объект наследуемого класса
@@ -891,7 +891,7 @@ public class Main2 {
         System.out.println(rj.sum3(2, 5, 3));
         Tehnik rj2 = new Tehnik_V();
         System.out.println();
-        rj2.vibor(5);
+        rj2.vibor(1);
         System.out.println();
         Dora.Biba rj3 = new Boba("Биба и Боба"); // Dora.Biba - вложенный интерфейс
         rj3.inf();
@@ -933,6 +933,54 @@ public class Main2 {
         as2.click();
         as3.click();
         as2.click();
+        System.out.println();
+
+        // Перечисления enum - набор логически связанных констант. Новый тип, можем присвоить переменную
+        Day dk = Day.Monday;
+        System.out.println(dk);
+        Work lo = new Work("Васечкин", "Лохмонтаж", Day.Thursday);
+        System.out.printf("%s из компании %s, работает в %s\n", lo.name, lo.komp, lo.d);
+        switch (lo.d) {
+            case Thursday -> {
+                System.out.println("Thursday");
+                break;
+            }
+            case Saturday -> {
+                System.out.println("Saturday");
+                break;
+            }
+        }
+        // Каждое перечисление(enum) имеет статический метод values(),
+        // который возвращает массив с константами перечисления(enum)
+        System.out.println("Константы из перечисления Day(из массива mass_day):");
+        Day[] mass_day = Day.values();
+        for (Day s:
+             mass_day) {
+            System.out.println(s);
+        }
+        // Метод ordinal() возвращает порядковый номер определенной константы (нумерация начинается с 0):
+        System.out.println(Day.Sunday.ordinal());
+        System.out.println(Color.Red.getCod());
+        System.out.println(Vich.Sum);
+        System.out.println();
+
+        // Класс Object и его методы
+        Chel ad = new Chel("Мопс");
+        System.out.println(ad.toString()); // toString - возвращает представления объекта в виде строки
+        Chel2 ad2 = new Chel2("Капрал");
+        System.out.println(ad2.toString());
+        System.out.println(ad.hashCode()); // код объекта ad
+        System.out.println();
+        System.out.println(ad2.hashCode());
+        System.out.println(ad2.hashCode2());
+        System.out.println(ad2.name2.hashCode()); // код переменной name2
+        Chel2.hesh(new Chel2("Мракобес"));
+        System.out.println(ad.getClass()); // тип объекта
+        System.out.println(ad.equals(ad2)); // сравнивает два объекта на равенство
+        Chel2 bv = new Chel2("Трактор");
+        Chel2 bv2 = new Chel2("Трактор");
+        System.out.println(bv.equlas2(bv2));
+        System.out.println();
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -1724,11 +1772,94 @@ class Click{
     public Click(Button_int x) {
         this.x = x;
     }
+//    Button_int b = new Button_deistv(); // можно и так
 
     public void click() {
         x.deistv();
+//        b.deistv(); можно и так
     }
 }
+// Перечисления enum
+enum Day {
+    Monday,
+    Tuesday,
+    Wedneaday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday;
+}
+class Work{
+    String name;
+    String komp;
+    Day d;
+
+    public Work(String name, String komp, Day d) {
+        this.d = d;
+        this.name = name;
+        this.komp = komp;
+    }
+}
+enum Color {
+    Red("#F0101"), Black("#F0011");
+    private String cod;
+
+    Color(String cod) { // конструктор по умолчанию приватный, определяет Red("#F0101")
+        this.cod = cod;
+    }
+
+    public String getCod() {
+        return cod;
+    }
+}
+enum Vich {
+    Sum {
+        public int oper(int x, int y) { // не можем использовать без абстрактного метода ниже
+            return x+y;
+        }
+    },
+    Umnog {
+        public int oper(int x, int y) {
+            return x*y;
+        }
+    };
+    public abstract int oper(int x, int y); // обязательно нужно прописывать метод без реализации(абстрактный),
+    // который будем вызывать в методах. Этот метод переопределяется в константах и является связующим с ними
+}
+class Chel {
+    String name;
+
+    Chel(String name) {
+        this.name = name;
+    }
+}
+class Chel2 {
+    String name2;
+
+    Chel2(String name) {
+        this.name2 = name;
+    }
+
+    public String toString() {
+        return "Chel2 "+name2;
+    }
+
+    public static void hesh(Chel2 x) { // можно изменять код объекта в этом классе
+        System.out.println(x.hashCode());
+    }
+
+    public int hashCode2() { // переопределение метода класса Object
+        return 10*name2.hashCode()+20456;
+    }
+
+    public boolean equlas2(Object h) {
+        if (!(h instanceof Chel2)) return false;
+
+        Chel2 p = (Chel2) h;
+        return this.name2.equals(p.name2); // если name2 не равны, то вернётся false
+    }
+}
+
 
 
 
