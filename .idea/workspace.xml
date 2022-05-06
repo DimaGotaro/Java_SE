@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Boba.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Boba.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Book.class" afterDir="false" />
@@ -11,15 +10,19 @@
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Bucha.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Bucha.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Bucha2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Bucha2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Button_deistv.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Button_deistv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chel2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chel2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Click.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Click.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Client2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Client2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Color.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Company.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Company2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Company2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Count4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Day.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Day.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Dora.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Dora.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Dura.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Dura.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Emporio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Emporio.class" afterDir="false" />
@@ -33,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Intro3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Intro3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Nacl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Nacl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Name2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Name2.class" afterDir="false" />
@@ -46,9 +50,14 @@
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Print.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Print.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Table.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Tehnik_V.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Tehnik_V.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vich.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vichisl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Vichisl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Work.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Work.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Writl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Writl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,4 @@
 package com.company;
-import java.awt.*;
 import java.util.Scanner;
 //import java.util.*; // импорт всех классов из пакета java.util
 import com.company3.Persona2; // импортирован из другого пакета
@@ -652,7 +651,7 @@ public class Main2 {
         /*try {
             int k13 = in.nextInt();
             if (k13>=30) {
-                throw new Exception(*//*"Число должно быть меньше 30"*//*); *//* Если сработало исключение,
+                throw new Exception(*//*"Число должно быть меньше 30"*//*);  *//*Если сработало исключение,
                 то управление переходит к блоку catch, ниже*//*
             }
         }
@@ -981,6 +980,95 @@ public class Main2 {
         Chel2 bv2 = new Chel2("Трактор");
         System.out.println(bv.equlas2(bv2));
         System.out.println();
+
+        // Обобщения (Generics)
+        Account kj = new Account(6845, 50000);
+        System.out.println(kj.getId());
+        System.out.println(kj.getId().getClass());
+//        int gh = (int) kj.getId(); // id и так Integer, преобразовывать тип не нужно
+//        System.out.println(kj.getId().getClass());
+        Account kj2 = new Account("568", 60000);
+        System.out.println(kj2.getId());
+        System.out.println(kj2.getId().getClass());
+//        int gh2 = (int) kj2.getId(); // мы можем не знать какой тип у kj2.getId
+        Account2<String> er = new Account2<String>("kjn554",56845); // <T>
+        System.out.println(er.getId());
+        System.out.println(er.getId().getClass());
+        Account2<Integer> er2 = new Account2<Integer>(2524,56845);
+        System.out.println(er2.getId());
+        System.out.println(er2.getId().getClass());
+        // Первый способ с обобщённым интерфейсом - обобщенный только интерфейс
+        Account_tabl<String> zm = new Accob("gf688", 56886);
+        System.out.println(zm.getId());
+        System.out.println(zm.getId().getClass());
+        Accob zm2 = new Accob("5468", 8468);
+        System.out.println(zm2.getId());
+        System.out.println(zm2.getId().getClass());
+        // Второй способ - обобщённые и интерфейс и класс который его использует
+        Account_tabl<Integer> zm3 = new Accob2<Integer>(5214,8489);
+        System.out.println(zm3.getId());
+        System.out.println(zm3.getId().getClass());
+        // Обобщённый метод
+        Bacha zm4 = new Bacha();
+        String[] pep = {"Grays","Biba", "Boba"};
+        Integer[] chisl = {5, 8, 24};
+        zm4.gera(pep);
+        zm4.gera(chisl);
+        // Несколько универсальных параметров
+        Accob3<String, Integer> zm5 = new Accob3<String, Integer>("ksj5968",854);
+        System.out.printf("id: %s, sum: %d\n", zm5.getId(), zm5.getSum());
+        // Обобщённый конструктор
+        Accob4 zm6 = new <Integer>Accob4(1589, 3589);
+        System.out.println(zm6.getId());
+        System.out.println(zm6.getId().getClass());
+        System.out.println();
+
+        // Ограничения обобщений
+        Ac_schet ne = new Ac_schet("vb15648", 2000);
+        Ac_schet ne2 = new Ac_schet("vb28493", 500);
+        Transachion<Ac_schet> ne3 = new Transachion<Ac_schet>(ne, ne2, 1000);
+        ne3.perevod();
+        ne3 = new Transachion<Ac_schet>(ne, ne2, 1500);
+        ne3.perevod();
+        // Обобщенные типы в качестве ограничений
+        Ac_schet2<String> ne5 = new Ac_schet2<String>("mn5486", 5000);
+        Ac_schet2<String> ne6 = new Ac_schet2<String>("mn5486", 1000);
+        Transachion2<Ac_schet2<String>> ne7 = new Transachion2<Ac_schet2<String>>(ne5, ne6, 1000);
+        ne7.perevod();
+        ne7 = new Transachion2<Ac_schet2<String>>(ne5, ne6, 4000);
+        ne7.perevod();
+        // Интерфейсы в качестве оганичений обобщений
+        Ac_schet3 yt = new Ac_schet3("jb354",3500);
+        Ac_schet3 yt2 = new Ac_schet3("jb793",1500);
+        Transachion3<Ac_int> yt3 = new Transachion3<Ac_int>(yt, yt2, 500);
+        yt3.perevod();
+        System.out.println();
+
+        // Наследование и обобщения
+        Naruto cd = new Naruto(5684); // если тип обобщения не задан, то он Object
+        System.out.println(cd.getId().getClass());
+        Naruto cd2 = new Naruto("vdlk5"); // если тип обобщения не задан, то он Object
+        System.out.println(cd2.getId().getClass());
+        Naruto2<String, Integer> cd3 = new Naruto2("vf64", 549); // два обобщения
+        System.out.println(cd3.getId().getClass());
+        System.out.println(cd3.getSum().getClass());
+        Naruto2 cd4 = new Naruto2(932, "dk65");
+        System.out.println(cd4.getId().getClass());
+        System.out.println(cd4.getSum().getClass());
+        Naruto3 cd5 = new Naruto3(); // класс-наследник вообще может не быть обобщенным
+        System.out.println(cd5.getId().getClass());
+        Naruto4<Integer> cd6 = new Naruto4<>("mdl89", 1473); // не обобщён родительский класс
+        System.out.println(cd6.getId()+":"+cd6.getSum());
+        Naruto<Integer> cd7 = new Naruto<Integer>(800);
+        Ramen<Integer> cd8 = (Ramen<Integer>) cd7; // преобразование обобщённых типов
+        System.out.println();
+
+        // Ссылочные типы и копирование объектов
+        Uzumaki gf = new Uzumaki("Naruto", 23);
+        gf.vivod_Uz();
+        Uzumaki gf2 = gf;
+        gf2.setName("Pain");
+        gf.vivod_Uz(); // то же изменено, одна область памяти у gf и gf2
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -1823,7 +1911,7 @@ enum Vich {
             return x*y;
         }
     };
-    public abstract int oper(int x, int y); // обязательно нужно прописывать метод без реализации(абстрактный),
+//    public abstract int oper(int x, int y); // обязательно нужно прописывать метод без реализации(абстрактный),
     // который будем вызывать в методах. Этот метод переопределяется в константах и является связующим с ними
 }
 class Chel {
@@ -1857,6 +1945,393 @@ class Chel2 {
 
         Chel2 p = (Chel2) h;
         return this.name2.equals(p.name2); // если name2 не равны, то вернётся false
+    }
+}
+class Account {
+    private Object id; // тип Object, при присвоении значения тип определится сам(int, String и тд)
+    private int sum;
+
+    public Account(Object id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public Object getId() { return id; }
+    public int getSum() { return sum; }
+    public void setSum(int sum) { this.sum = sum; }
+}
+class Account2<T> { // Generics(Обобщения) T - универсальный параметр
+    private T id;
+    private int sum;
+
+    public Account2(T id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public T getId() { return id; }
+    public int getSum() { return sum; }
+    public void setSum(int sum) { this.sum = sum; }
+}
+interface Account_tabl<T> {
+    T getId();
+    int getSum();
+    void setSum(int sum);
+}
+class Accob implements Account_tabl<String> { // нужно сразу указывать тип в <>
+    private String id;
+    private int sum;
+
+    public Accob(String id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public int getSum() {
+        return sum;
+    }
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+class Accob2<T> implements Account_tabl<T> { // нужно сразу указывать тип в <>
+    private T id;
+    private int sum;
+
+    public Accob2(T id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public T getId() {
+        return id;
+    }
+    public int getSum() {
+        return sum;
+    }
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+class Bacha {
+    public <T> void gera(T[] mass_B) { // обобщённый метод
+        for (T i:
+             mass_B) {
+            System.out.println(i);
+        }
+    }
+    public <R> R gera2(R h) { // метод с return
+        return h;
+    }
+}
+class Accob3<T, S>{
+    private T id;
+    private S sum;
+
+    public Accob3(T id, S sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public T getId() {
+        return id;
+    }
+    public S getSum() {
+        return sum;
+    }
+    public void setSum(S sum) {
+        this.sum = sum;
+    }
+}
+class Accob4 {
+    private String id;
+    private int sum;
+
+    public <T> Accob4(T id, int sum) {
+        this.id = id.toString();
+        this.sum = sum;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public int getSum() {
+        return sum;
+    }
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+// Ограничение обобщений
+class Ac_schet{
+    private String id;
+    private int sum;
+
+    public Ac_schet(String id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+class Transachion<T extends Ac_schet> { // ограничение обобщения
+    private T otcuda;
+    private T kyda;
+    private int sum;
+
+    public Transachion(T otcuda, T kyda, int sum) {
+        this.otcuda = otcuda;
+        this.kyda = kyda;
+        this.sum = sum;
+    }
+
+    public void perevod() {
+        if (otcuda.getSum() > sum) {
+            otcuda.setSum(otcuda.getSum() - sum);
+            kyda.setSum(kyda.getSum() + sum);
+            System.out.printf("Account: %s - %d\nAccount %s - %d\n", otcuda.getId(), otcuda.getSum(), kyda.getId(),
+                    kyda.getSum());
+        }
+        else {
+            System.out.println("Optrashion is invalid");
+        }
+    }
+}
+class Ac_schet2<N>{
+    private N id;
+    private int sum;
+
+    public Ac_schet2(N id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public N getId() {
+        return id;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+class Transachion2<T extends Ac_schet2<String>> { // ограничение обобщения
+    private T otcuda;
+    private T kyda;
+    private int sum;
+
+    public Transachion2(T otcuda, T kyda, int sum) {
+        this.otcuda = otcuda;
+        this.kyda = kyda;
+        this.sum = sum;
+    }
+
+    public void perevod() {
+        if (otcuda.getSum() > sum) {
+            otcuda.setSum(otcuda.getSum() - sum);
+            kyda.setSum(kyda.getSum() + sum);
+            System.out.printf("Account: %s - %d\nAccount %s - %d\n", otcuda.getId(), otcuda.getSum(), kyda.getId(),
+                    kyda.getSum());
+        }
+        else {
+            System.out.println("Optrashion is invalid");
+        }
+    }
+}
+interface Ac_int {
+    public String getId();
+    public int getSum();
+    public void setSum(int sum);
+}
+class Ac_schet3 implements Ac_int{
+    private String id;
+    private int sum;
+
+    public Ac_schet3(String id, int sum) {
+        this.id = id;
+        this.sum = sum;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+}
+class Transachion3<T extends Ac_int> { // ограничение обобщения
+    private T otcuda;
+    private T kyda;
+    private int sum;
+
+    public Transachion3(T otcuda, T kyda, int sum) {
+        this.otcuda = otcuda;
+        this.kyda = kyda;
+        this.sum = sum;
+    }
+
+    public void perevod() {
+        if (otcuda.getSum() > sum) {
+            otcuda.setSum(otcuda.getSum() - sum);
+            kyda.setSum(kyda.getSum() + sum);
+            System.out.printf("Account: %s - %d\nAccount %s - %d\n", otcuda.getId(), otcuda.getSum(), kyda.getId(),
+                    kyda.getSum());
+        }
+        else {
+            System.out.println("Optrashion is invalid");
+        }
+    }
+}
+interface Odama{}
+class Rasengan{}
+class Nautro<R extends Rasengan & Odama>{} // Несколько ограничений. В объектах должны одновременно реализовывать
+// интерфейс Odama и быть наследниками класса Rasengan
+
+// Наследование и обобщения
+class Ramen<T>{
+    private T id;
+
+    public Ramen(T id) {
+        this.id = id;
+    }
+
+    public T getId() {
+        return id;
+    }
+}
+class Naruto<T> extends Ramen<T> {
+    public Naruto(T id) {
+        super(id);
+    }
+}
+class Ramen2<T>{
+    private T id;
+
+    public Ramen2(T id) {
+        this.id = id;
+    }
+
+    public T getId() {
+        return id;
+    }
+}
+class Naruto2<T, S> extends Ramen<T> { // класс-наследник
+    private S sum;
+
+    public Naruto2(T id, S sum) {
+        super(id);
+        this.sum = sum;
+    }
+
+    public S getSum() {
+        return sum;
+    }
+}
+class Ramen3<T>{
+    private T id;
+
+    public Ramen3(T id) {
+        this.id = id;
+    }
+
+    public T getId() {
+        return id;
+    }
+}
+class Naruto3 extends Ramen<String> { // класс-наследник вообще может не быть обобщенным
+
+    public Naruto3() {
+        super("jhk");
+    }
+}
+class Ramen4{ // родительский класс не обобщён
+    private String id;
+
+    public Ramen4(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+}
+class Naruto4<T> extends Ramen {
+    private T sum;
+
+    public Naruto4(String id, T sum) {
+        super(id);
+        this.sum = sum;
+    }
+
+    public T getSum() {
+        return sum;
+    }
+}
+class Uzumaki{
+    private String name;
+    private int age;
+
+    public Uzumaki(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    void vivod_Uz() {
+        System.out.printf("Uzumaki name: %s\n", name);
+    }
+}
+class Uzumaki2 implements Cloneable{
+    private String name;
+    private int age;
+
+    public Uzumaki2(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    void vivod_Uz() {
+        System.out.printf("Uzumaki name: %s\n", name);
+    }
+
+    public Uzumaki2 clone() throws CloneNotSupportedException {
+        return (Uzumaki2) super.clone();
     }
 }
 
