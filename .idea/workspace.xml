@@ -57,7 +57,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Work.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Work.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Writl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Writl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main2">
     <configuration name="Main2" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main2" />
       <module name="HelloApp" />

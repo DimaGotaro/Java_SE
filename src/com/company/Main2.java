@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;
+import java.util.Objects;
 //import java.util.*; // импорт всех классов из пакета java.util
 import com.company3.Persona2; // импортирован из другого пакета
 
@@ -1069,6 +1070,56 @@ public class Main2 {
         Uzumaki gf2 = gf;
         gf2.setName("Pain");
         gf.vivod_Uz(); // то же изменено, одна область памяти у gf и gf2
+        // Клонирование объекта. Класс должен применять интерфейс
+        try {
+            Uzumaki2 ei = new Uzumaki2("Nagato", 2500);
+            Uzumaki2 ei2 = ei.clone(); // присваиваем новом объекту использование clone на первом объекте
+            ei2.setName("Konan");
+            ei.vivod_Uz();
+            ei2.vivod_Uz();
+        }
+        catch (CloneNotSupportedException ex) {
+            System.out.println("Ошибка!");
+        }
+        try {
+            Book_D sd = new Book_D("Мы", "Замятин");
+            Book_D sd2 = sd.clone();
+            // клонирование не получится, потому что в классе Book_D содержится ссылка на переменную класса Autor_D,
+            // а в классе Autor_D нету метода clone, его мы не клонировали
+            sd2.setAutor("Есенин");
+            System.out.println(sd.print());
+            System.out.println(sd2.print());
+        }
+        catch (CloneNotSupportedException ex) {
+            System.out.println("Ошибка!");
+        }
+        // Полное клонирование
+        try {
+            Book_D2 tt = new Book_D2("1984", "Оруэлл");
+            Book_D2 tt2 = tt.clone();
+            tt2.setAutor("Лепс");
+            System.out.println(tt.print());
+            System.out.println(tt2.print());
+        }
+        catch (CloneNotSupportedException ex) {
+            System.out.println("Ошибка!");
+        }
+        System.out.println();
+
+        // Records
+        Pidoras rt = new Pidoras("Vasya", 55);
+        System.out.println(rt.toString());
+        System.out.println(rt.equals(gf)); // Uzumaki gf = new Uzumaki("Naruto", 23);
+        Pidoras rt2 = new Pidoras("Vasya", 55);
+        System.out.println(rt.equals(rt2));
+        Pidoras2 rt3 = new Pidoras2("Kolya", 21); // Records
+        System.out.println(rt3.toString());
+        System.out.println(rt3.hashCode());
+        Pidoras2 rt4 = new Pidoras2("Bodya", 111); // age = 18
+        System.out.println(rt4.toString());
+        Pidoras2 rt5 = new Pidoras2("Nate", "Hrykoninovna", 27); // переопределённый конструктор
+        System.out.println(rt5.toString());
+        System.out.println(rt5.name());
     }
     public static void hello() {
         System.out.println("Hello!");
@@ -2309,7 +2360,8 @@ class Uzumaki{
         System.out.printf("Uzumaki name: %s\n", name);
     }
 }
-class Uzumaki2 implements Cloneable{
+class Uzumaki2 implements Cloneable{ // для клонирования нужно применить интерфейс Cloneable который определяет
+    // метод clone()
     private String name;
     private int age;
 
@@ -2330,10 +2382,192 @@ class Uzumaki2 implements Cloneable{
         System.out.printf("Uzumaki name: %s\n", name);
     }
 
-    public Uzumaki2 clone() throws CloneNotSupportedException {
-        return (Uzumaki2) super.clone();
+    public Uzumaki2 clone() throws CloneNotSupportedException { // возвращает вызов метода clone
+        // для родительского класса - то есть класса Object с преобразованием к типу Uzumaki2. Кроме того,
+        // на случай если класс не поддерживает клонирование, метод должен выбрасывать исключение
+        // CloneNotSupportedException, что определяется с помощью оператора throws.
+        return (Uzumaki2) super.clone(); // метод из Object нужно преобразовать к типу который хотим клонировать
     }
 }
+class Book_D implements Cloneable {
+    private String name;
+    private Autor_D autor; // создан объект в классе Book_D
+
+    public Book_D(String name, String autor) { // String autor это String name класса Autor_D. В конструкторе
+        // вводим данные полей двух классов!
+        this.name = name;
+        this.autor = new Autor_D(autor); // приравниваем конструктор к объекту
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAutor() {
+        return autor.getName();
+    }
+
+    public void setAutor(String autor) {
+        this.autor.setName(autor); // ссылаемся на сеттер класса Autor_D
+    }
+
+    public Book_D clone() throws CloneNotSupportedException {
+        return (Book_D) super.clone();
+    }
+
+    public String print() {
+        return "Книга '" + name + "', Автор '" + autor.getName() + "'";
+    }
+}
+class Autor_D {
+    private String name;
+
+    public Autor_D(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+class Book_D2 implements Cloneable {
+    private String name;
+    private Autor_D2 autor; // создан объект в классе Book_D2
+
+    public Book_D2(String name, String autor) { // String autor это String name класса Autor_D2. В конструкторе
+        // вводим данные полей двух классов!
+        this.name = name;
+        this.autor = new Autor_D2(autor); // приравниваем конструктор к объекту
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAutor() {
+        return autor.getName();
+    }
+
+    public void setAutor(String autor) {
+        this.autor.setName(autor); // ссылаемся на сеттер класса Autor_D
+    }
+
+    public Book_D2 clone() throws CloneNotSupportedException {
+        Book_D2 nBook = (Book_D2) super.clone(); // клонировали память как и раньше
+        nBook.autor = (Autor_D2) autor.clone(); // клонируем, только ссылаясь на метод класса Autor_D2
+        return nBook;
+    }
+
+    public String print() {
+        return "Книга '" + name + "', Автор '" + autor.getName() + "'";
+    }
+}
+class Autor_D2 implements Cloneable {
+    private String name;
+
+    public Autor_D2(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Autor_D2 clone() throws CloneNotSupportedException {
+        return (Autor_D2) super.clone();
+    }
+}
+// Records
+class Pidoras {
+    private final String name; // вводятся только в конструкторе
+    private final int age;
+
+    Pidoras (String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public int age() {
+        return age;
+    }
+
+    public boolean equals(Object o) {
+        if (!(o instanceof Pidoras)) return false;
+        Pidoras hg = (Pidoras) o;
+        return hg.name == this.name && hg.age == age;
+    }
+
+    public String toString() {
+        return String.format("Людина: %s, %d року", name, age);
+    }
+
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+record Pidoras2(String name, int age) { // то же что выше, только короче
+    /* Следует учитывать, что мы не можем наследовать запись record от других классов.
+     Также нельзя наследовать классы от records. Однако классы record могут реализовать интерфейсы.
+      Кроме того, классы record не могут быть абстрактными.*/
+    static int g; // внутри records можем определять только статические переменные и инициализаторы
+    static {
+        g = 8;
+    }
+
+//    Pidoras2 { // добавили логику в канонический конструктор
+//        if (age < 1 || age > 110) { // || - или
+//            age = 18;
+//        }
+//    }
+
+    /*Pidoras2(String name, int age) { // переопределение канонического конструктора
+        if (age < 1 || age > 110) age =18;
+        this.name = name;
+        this.age = age;
+    }*/
+
+    Pidoras2(String g, String k, int a) {
+        this(g + " " + k, a); // обращаться должны к каноническому конструктору в котором два поля
+    }
+
+    public String name() { // переопределение метода
+        return "Человек: " + name;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
