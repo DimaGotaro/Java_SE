@@ -25,7 +25,7 @@ public class Test {
             System.out.println("Finally");
         }
         // throw - оператор
-        try {
+        /*try {
             int a = in.nextInt();
             if (a>=30) { // создаём своё исключение, с помощью throw
                 throw new Exception("Меньше 30"); // создали объект и использовали конструктор класса Exception
@@ -33,10 +33,58 @@ public class Test {
         }
         catch (Exception ex) {
             System.out.println(ex.getMessage());
+        }*/
+
+        try { // обработка исключения в методе main
+            System.out.println(fact(-3));
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+//            System.out.println("O");
+        }
+        System.out.println(fact2(-2));
+
+        // Классы исключений
+        try {
+            int h = 6/0;
+        }
+        catch (Exception ex) {
+            ex.printStackTrace(); // вывод ошибки
+        }
+
+        // Создание своих классов исключений
+        try {
+            System.out.println(Factorial.fact(-6));
+        }
+        catch (FactExt ex) {
+            System.out.println(ex.getMessage());
+            System.out.println(ex.getNumber());
         }
     }
+    public static int fact(int x) throws Exception {
+        if (x < 1) throw new Exception("Ошибка!");
+        int res = 1;
+        for (int i=1; i <= x; i++) {
+            res *= i;
+        }
+        return res;
+    }
+    public static int fact2(int x) { // обработка исключения в самом методе fact2
+        int res = 1;
+        try {
+            if (x < 1) throw new Exception("Ошибка2!");
+            for (int i=1; i <= x; i++) {
+                res *= i;
+            }
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            res = x;
+        }
+        return res;
+    }
 }
-class Person2 {
+class Person2 implements Cloneable {
     String name;
 
     Person2(String name) {
@@ -45,5 +93,31 @@ class Person2 {
 
     public int hashCode2() {
         return 5*name.hashCode()/3;
+    }
+
+    public Person2 clone() throws CloneNotSupportedException {
+        return (Person2) super.clone();
+    }
+}
+class Factorial {
+    public static int fact(int x) throws FactExt { // throws - не нужно try/catch
+        int result = 1;
+        if (x < 1) throw new FactExt("Error!", x);
+        for (int i = 1; i <= x; i++) {
+            result *= i;
+        }
+        return result;
+    }
+}
+class FactExt extends Exception {
+    private int number;
+
+    public int getNumber() {
+        return number;
+    }
+
+    public FactExt(String message, int x) {
+        super(message);
+        this.number = x;
     }
 }
