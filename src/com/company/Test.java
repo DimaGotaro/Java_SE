@@ -60,6 +60,7 @@ public class Test {
             System.out.println(ex.getMessage());
             System.out.println(ex.getNumber());
         }
+        hanoe(3, 'A', 'B', 'C');
     }
     public static int fact(int x) throws Exception {
         if (x < 1) throw new Exception("Ошибка!");
@@ -82,6 +83,16 @@ public class Test {
             res = x;
         }
         return res;
+    }
+    public static void hanoe(int n, char start, char help, char target) {
+        if (n==1) {
+            System.out.println("!Disk 1 from " + start + " to " + target);
+        }
+        else {
+            hanoe(n-1, start, target, help);
+            System.out.println("Disk " + n + " from " + start + " to " + target);
+            hanoe(n-1, help, start, target);
+        }
     }
 }
 class Person2 implements Cloneable {
