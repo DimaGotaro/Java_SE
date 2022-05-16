@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/FactExt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/FactExt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Factorial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Factorial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Lichnost.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Lichnost.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Person2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Person2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
