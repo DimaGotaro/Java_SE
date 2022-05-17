@@ -1,0 +1,168 @@
+package com.company;
+import java.io.*;
+
+public class Main5 {
+    public static void main(String[] args) {
+        // Потоки ввода-вывода. Работа с файлами
+        // Потоки ввода-вывода
+        /* В основе всех классов, управляющих потоками байтов, находятся два абстрактных класса:
+         InputStream (представляющий потоки ввода) и OutputStream (представляющий потоки вывода)
+         Но поскольку работать с байтами не очень удобно, то для работы с потоками символов были добавлены
+          абстрактные классы Reader (для чтения потоков символов) и Writer (для записи потоков символов).*/
+
+        // Чтение и запись файлов. FileInputStream и FileOutputStream
+        String text = "Huli vilypilsya?";
+        try (FileOutputStream fok = new FileOutputStream("C:\\Users\\dima\\Desktop\\ит.txt")) { /* если файла
+         нет, то он создаётся. Потоки закрываются автоматически*/
+            byte[] butter = text.getBytes(); // перевод строки в байты
+            for (byte m:
+                 butter) {
+                System.out.print(m+" ");
+            }
+            System.out.println();
+//            fok.write(butter[0]); // запись одного байта, одна буква
+            fok.write(butter, 0, butter.length); // 0 - начало записи байтов
+            System.out.println(fok);
+            System.out.println("Выполнено!");
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        // Чтение файлов и класс FileInputStream
+        try (FileInputStream fik = new FileInputStream("C:\\Users\\dima\\Desktop\\ит.txt")) {
+            System.out.println("Кол-во байтов доступных для считывания: " + fik.available());
+            int i = 865;
+            while ((i= fik.read())!= -1) { // считываем каждый отдельный байт в переменную i, по одному
+                System.out.print((char) i); // каждый считанный байт конвертируется в объект типа char
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        // с помощью массива 2
+        FileInputStream fik2 = null;
+        try {
+            fik2 = new FileInputStream("C:\\Users\\dima\\Desktop\\ит.txt");
+            System.out.println("Кол-во байтов доступных для считывания(2): " + fik2.available());
+            byte[] nutter = new byte[fik2.available()]; // кол-во ячеек
+            fik2.read(nutter, 0, nutter.length);
+            for (byte c:
+                    nutter) {
+                System.out.print((char) c);
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally { // так закрывали поток диды без конструктора в try
+            try {
+                if (fik2 != null) { // если значение изменено, то операция прошла успешно и нужно закрыть поток
+                    fik2.close(); // закрытие потока
+                }
+            }
+            catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        // с помощью массива 3
+        try (FileInputStream fik = new FileInputStream("C:\\Users\\dima\\Desktop\\ит.txt")) {
+            System.out.println("Кол-во байтов доступных для считывания(3): " + fik.available());
+            byte[] nutter = fik.readAllBytes();
+            for (byte c:
+                 nutter) {
+                System.out.print((char) c);
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        // Совместим
+        try (FileInputStream fik = new FileInputStream("C:\\Users\\dima\\Desktop\\ит.txt");
+        FileOutputStream fok = new FileOutputStream("C:\\Users\\dima\\Desktop\\ит2.txt")) {
+//            byte[] vivo = new byte[fik.available()];
+//            fik.read(vivo, 0, vivo.length);
+            byte[] vivo = fik.readAllBytes(); // то же только в одну строку
+            fok.write(vivo, 0, vivo.length);
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println();
+
+        // Классы ByteArrayInputStream и ByteArrayOutputStream, для закрытия объекта ByteArrayInputStream
+        // не требуется вызывать метод close
+        byte[] b1 = {1,2,7,6};
+        ByteArrayInputStream b_1 = new ByteArrayInputStream(b1);
+        int i;
+        while ((i= b_1.read()) != -1) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+
+        String bs2 = "Manifest";
+        byte[] b2 = bs2.getBytes();
+        ByteArrayInputStream b_2 = new ByteArrayInputStream(b2, 0, 4); // только 4 символа
+        int i2;
+        byte[] b21 = b_2.readAllBytes();
+        while ((i2= b_2.read()) != -1) {
+            System.out.print((char) i2);
+        }
+        System.out.println();
+
+        String bs3 = "Kapital";
+        byte[] b3 = bs3.getBytes();
+        ByteArrayOutputStream b_3 = new ByteArrayOutputStream();
+        try {
+            b_3.write(b3); // направили массив байтов в поток
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println("1 " + b_3);
+        System.out.println("2 " + b_3.toString()); // из байтов в стоку
+        byte[] b32 = b_3.toByteArray(); // из потока в массив байтов
+        for (byte c:
+             b32) {
+            System.out.print((char) c);
+        }
+        try (FileOutputStream fok = new FileOutputStream("Marks.txt")) { //направили поток в другой поток, в файл
+            b_3.writeTo(fok);
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println();
+        System.out.println();
+
+        // Буферизованные потоки BufferedInputStream и BufferedOutputStream
+        // Класс BufferedInputStream
+        String bs4 = "Jordan";
+        byte[] b4 = bs4.getBytes();
+        ByteArrayInputStream b_4 = new ByteArrayInputStream(b4);
+        try (BufferedInputStream bu_4 = new BufferedInputStream(b_4)) { // направляем поток в отдельный буфер памяти
+            byte[] b41 = bu_4.readAllBytes();
+            for (byte b:
+                 b41) {
+                System.out.print((char) b);
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // Класс BufferedOutputStream
+        String bs5 = "Novyhodonoser";
+        byte[] b5 = bs5.getBytes();
+        try (FileOutputStream b_5 = new FileOutputStream("Marks2.txt");
+        BufferedOutputStream bu_5 = new BufferedOutputStream(b_5)) {
+            bu_5.write(b5, 0, b5.length);
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+    }
+}

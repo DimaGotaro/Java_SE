@@ -61,6 +61,24 @@ public class Test {
             System.out.println(ex.getNumber());
         }
         hanoe(3, 'A', 'B', 'C');
+        System.out.println();
+
+        int[] mass = new int[2];
+        for (int q:
+             mass) {
+            System.out.print(q);
+        }
+        System.out.println();
+        int[][] mass2 = {
+                {5,6,2},
+                {22,3}
+        };
+        for (int i=0; i<mass2.length; i++) {
+            for (int j=0; j<mass2[i].length; j++) {
+                System.out.print(mass2[i][j]+" \t");
+            }
+            System.out.println();
+        }
     }
     public static int fact(int x) throws Exception {
         if (x < 1) throw new Exception("Ошибка!");
