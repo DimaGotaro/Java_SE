@@ -164,5 +164,64 @@ public class Main5 {
         catch (IOException ex) {
             System.out.print(ex.getMessage());
         }
+        System.out.println();
+
+        // Форматируемый ввод и вывод. PrintStream и PrintWriter
+        // Класс PrintStream, предоставляет функционал для чтения текстовой информации
+        String bs6 = "Hello mazafaka!";
+        try (FileOutputStream b_6 = new FileOutputStream("Marks3.txt");
+        PrintStream bp_6 = new PrintStream(b_6)) {
+            bp_6.println(bs6);
+            bp_6.println("Idi otsuda!");
+            System.out.println("Запись успешна!");
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        try(PrintStream b_7 = new PrintStream("Marks4.txt")) { // следующий поток в тот же файл отправляет
+            // данные в начало файла txt, стирая предыдущие записи
+            b_7.print("Pokemon: ");
+            b_7.println("Pikachu!");
+            b_7.printf("Pokmon%d: ", 2);
+            String bs7 = "Bulbozavr";
+            byte[] b7 = bs7.getBytes();
+            b_7.write(b7);
+            b_7.println();
+            System.out.println("Успешно!");
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // PrintWriter
+        try (PrintWriter pw = new PrintWriter(System.out)) { // try для того чтобы автоматически закрыть поток
+            pw.println("Hello Mazafaka!");
+        }
+
+        // Классы DataOutputStream и DataInputStream
+        // Запись данных и DataOutputStream. DataOutputStream out = DataOutputStream(OutputStream out)
+        Pesonaj c1 = new Pesonaj("Bodya", 31, 75.5, true);
+        try(DataOutputStream c_1 = new DataOutputStream(new FileOutputStream("data.bin"))) {
+            c_1.writeUTF(c1.name);
+            c_1.writeInt(c1.age);
+            c_1.writeDouble(c1.ves);
+            c_1.writeBoolean(c1.married);
+            System.out.println("Готово!");
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+    }
+}
+class Pesonaj {
+    public String name;
+    public int age;
+    public double ves;
+    public boolean married;
+
+    public Pesonaj(String name, int age, double ves, boolean married) {
+        this.name = name;
+        this.age = age;
+        this.ves = ves;
+        this.married = married;
     }
 }
