@@ -1,8 +1,9 @@
 package com.company;
 import java.io.*;
+import java.util.Arrays;
 
 public class Main5 {
-    public static void main(String[] args) {
+    public static void main(String[] args) /*throws IOException*/ { // не нужен try...catch
         // Потоки ввода-вывода. Работа с файлами
         // Потоки ввода-вывода
         /* В основе всех классов, управляющих потоками байтов, находятся два абстрактных класса:
@@ -193,9 +194,12 @@ public class Main5 {
             System.out.print(ex.getMessage());
         }
         // PrintWriter
-        try (PrintWriter pw = new PrintWriter(System.out)) { // try для того чтобы автоматически закрыть поток
-            pw.println("Hello Mazafaka!");
-        }
+//        PrintWriter pw = new PrintWriter(System.out, true); // try для того чтобы автоматически закрыть поток, но
+//         //после не работает System.out.println
+//        pw.println("Hello Mazafaka!");
+////        pw.close(); // если не закрывать поток без try, то всё работает
+//        System.out.println("Готово!");
+//        pw.println("by");
 
         // Классы DataOutputStream и DataInputStream
         // Запись данных и DataOutputStream. DataOutputStream out = DataOutputStream(OutputStream out)
@@ -206,6 +210,76 @@ public class Main5 {
             c_1.writeDouble(c1.ves);
             c_1.writeBoolean(c1.married);
             System.out.println("Готово!");
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        try(DataInputStream c_11 = new DataInputStream(new FileInputStream("data.bin"))) {
+            String name = c_11.readUTF();
+            int age = c_11.readInt();
+            double ves = c_11.readDouble();
+            boolean married = c_11.readBoolean();
+            System.out.printf("Имя: %s; Возраст: %d; Вес: %.2f; Женат: %b;\n", name, age, ves, married);
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        System.out.println();
+
+        // Чтение и запись текстовых файлов
+        // Запись файлов. Класс FileWriter
+        try(FileWriter d1 = new FileWriter("note.txt", false);) {
+        /* true - с каждым выполнением в файл значения будут добавляться,
+        false - с каждым выполнением файл будет перезаписываться*/
+            String ds1 = "Ройд_Лойд\n";
+            d1.write(ds1);
+            d1.append('E'); // символ
+            d1.append('\n');
+            d1.append("Ebola\n"); // набор символов
+            d1.flush(); // просто надо, чё-то там очищает в буфере
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // Чтение файлов. Класс FileReader
+        try(FileReader d2 = new FileReader("note.txt")) {
+            char[] dc2 = new char[256];
+            int k;
+            while ((k=d2.read(dc2)) != -1){
+                System.out.println(k); // возвращает кол-во символов, поэтому int k
+                for (char b:
+                     dc2) {
+                    System.out.print((char) b); // перечеркнутые нули - это оставшиеся элементы массива 256-18=238
+                }
+            }
+            System.out.println("V"); // в коце перечёркнтых нулей
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // 2 способ, перебираем каждый байт
+        try(FileReader d2 = new FileReader("note.txt")) {
+            int l; // int потому что в l будут записаны байты
+            while ((l= d2.read()) != -1) {
+                System.out.print((char) l);
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // 3 способ, без перечёркнутых нулей
+        try(FileReader d2 = new FileReader("note.txt")) {
+            char[] dc2 = new char[256];
+            int k;
+            while ((k=d2.read(dc2)) > 0){ // в массив считываются символы, не байты!
+                System.out.println(k); // возвращает кол-во символов, поэтому у переменной k тип int
+                if (k < 256) {
+                    dc2 = Arrays.copyOf(dc2, k); // копируем в массив тот же массив, но обрезая по кол-во символов k
+                }
+                System.out.println(dc2); // после Ebola переход на следующую строку
+            }
         }
         catch (IOException ex) {
             System.out.print(ex.getMessage());
