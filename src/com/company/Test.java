@@ -79,6 +79,25 @@ public class Test {
             }
             System.out.println();
         }
+        System.out.println();
+        // сортировка массива
+        int[] mas = new int[] {5, 3, 1, 8, 2, 7 };
+        for (int i = 0; i < mas.length; i++) {
+            int min = mas[i];
+            int min_i = i;
+            for (int j = i + 1; j < mas.length; j++) {
+                if(mas[j] < min) {
+                    min = mas[j];
+                    min_i = j;
+                }
+            }
+            if (i != min_i) {
+                int tmp = mas[i];
+                mas[i] = mas[min_i];
+                mas[min_i] = tmp;
+            }
+            System.out.println(mas[i]);
+        }
     }
     public static int fact(int x) throws Exception {
         if (x < 1) throw new Exception("Ошибка!");

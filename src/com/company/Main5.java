@@ -1,6 +1,11 @@
 package com.company;
 import java.io.*;
-import java.util.Arrays;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
 
 public class Main5 {
     public static void main(String[] args) /*throws IOException*/ { // не нужен try...catch
@@ -241,6 +246,22 @@ public class Main5 {
         catch (IOException ex) {
             System.out.print(ex.getMessage());
         }
+        // передать в файл числа
+        try(FileWriter d1 = new FileWriter("note2.txt", false);) {
+            int g = 88;
+            for (int i3 = 0; i3 < 5; i3++) {
+                d1.write("88"); // как строка
+//                d1.append("88"); // как набор символов
+                d1.append(" ");
+                d1.append('7');
+                d1.append('7');
+                d1.append(" ");
+            }
+            d1.flush();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
         // Чтение файлов. Класс FileReader
         try(FileReader d2 = new FileReader("note.txt")) {
             char[] dc2 = new char[256];
@@ -274,7 +295,8 @@ public class Main5 {
             char[] dc2 = new char[256];
             int k;
             while ((k=d2.read(dc2)) > 0){ // в массив считываются символы, не байты!
-                System.out.println(k); // возвращает кол-во символов, поэтому у переменной k тип int
+                // d2.read(dc2) возвращает кол-во символов, поэтому у переменной k тип int
+                System.out.println(k);
                 if (k < 256) {
                     dc2 = Arrays.copyOf(dc2, k); // копируем в массив тот же массив, но обрезая по кол-во символов k
                 }
@@ -283,6 +305,243 @@ public class Main5 {
         }
         catch (IOException ex) {
             System.out.print(ex.getMessage());
+        }
+
+        // Буферизация символьных потоков. BufferedReader и BufferedWriter
+        // Запись текста через буфер и BufferedWriter,
+        // записывает текст в поток, предварительно буферизируя
+        // записываемые символы, тем самым снижая количество обращений к физическому носителю для записи данных
+        try(BufferedWriter d3 = new BufferedWriter(new FileWriter("note3.txt"))) {
+            String ds3 = "Границы ключ переломлен пополам,\nА наш батюшка Ленин, совсем усох\n";
+            d3.write(ds3);
+            d3.flush();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // Чтение текста и BufferedReader,
+        // считывает текст из символьного потока ввода, буферизируя прочитанные
+        // символы. Использование буфера призвано увеличить производительность чтения данных из потока
+        try(BufferedReader d4 = new BufferedReader(new FileReader("note3.txt"))) {
+            int s;
+            while ((s = d4.read()) != -1) { // посимвольно
+                System.out.print((char) s);
+            }
+            System.out.println();
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        try(BufferedReader d4 = new BufferedReader(new FileReader("note3.txt"))) {
+            String s;
+            while ((s = d4.readLine()) != null) {
+                System.out.println(s);
+            }
+            System.out.println();
+        }
+        catch (IOException ex) {
+            System.out.print(ex.getMessage());
+        }
+        // Считывание с консоли в файл
+//        try(BufferedReader d4 = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter d41 = new BufferedWriter(new FileWriter("note4.txt"))) {
+//            String h;
+//            while (!(h = d4.readLine()).equals("esc")) {
+//                d41.write(h);
+//                d41.append('\n');
+//                d41.flush();
+//            }
+//        }
+//        catch (IOException ex) {
+//            System.out.print(ex.getMessage());
+//        }
+
+        // Сериализация
+        // Сериализация. Класс ObjectOutputStream
+        try(ObjectOutputStream d5 = new ObjectOutputStream(new FileOutputStream("person.dat"))) {
+            Pesonaj2 dp5 = new Pesonaj2("Valera", 38, 86.4, false);
+            d5.writeObject(dp5); // сериализация объекта
+            d5.flush();
+        }
+        catch (Exception ex) {
+            System.out.print(ex.getMessage());
+        }
+        // Десериализация
+        try(ObjectInputStream d6 = new ObjectInputStream(new FileInputStream("person.dat"))) {
+            Pesonaj2 dp6 = (Pesonaj2) d6.readObject();
+            System.out.printf("Имя: %s; Возраст: %d; Вес: %.2f; Женат: %b;\n", dp6.getName(), dp6.getAge(),
+                    dp6.getVes(), dp6.isMarried());
+            System.out.println();
+        }
+        catch (Exception ex) {
+            System.out.print(ex.getMessage());
+        }
+        // всё вместе
+        try(ObjectOutputStream d7 = new ObjectOutputStream(new FileOutputStream("person2.txt"));
+        ObjectInputStream d71 = new ObjectInputStream(new FileInputStream("person2.txt"))) {
+            ArrayList<Pesonaj2> da7 = new ArrayList<>(2);
+            da7.add(new Pesonaj2("Marla", 26, 46.2, true));
+            da7.add(new Pesonaj2("Tailer", 29, 78.8, false));
+            d7.writeObject(da7);
+            ArrayList<Pesonaj2> da71 = (ArrayList<Pesonaj2>) d71.readObject();
+            for (Pesonaj2 l:
+                 da71) {
+                System.out.printf("Имя: %s; Возраст: %d; Вес: %.2f; Женат: %b;\n", l.getName(), l.getAge(),
+                        l.getVes(), l.isMarried());
+            }
+            System.out.println();
+        }
+        catch (Exception ex) {
+            System.out.print(ex.getMessage());
+        }
+
+        // Класс File. Работа с файлами и каталогами
+        /* управление информацией о файлах и каталогах*/
+        File dir1 = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp"); /* cоздали объект для каталога
+         HelloApp, указав в конструкторе путь к нему*/
+        File file1 = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp", "note3.txt"); /* создали объект
+         для файла в каталоге, указав путь к каталогу и имя файла*/
+        File file2 = new File(dir1, "note4.txt"); /* создали объект для файла в каталоге,
+         указав имя каталога и имя файла*/
+        if (dir1.isDirectory()) {
+            for (File v:
+                 dir1.listFiles()) {
+                if (v.isDirectory()) {
+                    if (v.isHidden()) {
+                        System.out.println(v.getName() + " - Каталог скрытый");
+
+                    }
+                    else {
+                        System.out.println(v.getName() + " - Каталог");
+                    }
+                }
+                else {
+                    System.out.println(v.getName() + " - Файл");
+                }
+            }
+        }
+        System.out.println();
+        System.out.println(dir1.getAbsolutePath()); // путь к каталогу
+        System.out.println(file1.exists()); // проверяет, существует ли по указанному пути файл или каталог
+        System.out.println(file1.getAbsolutePath()); // путь к файлу
+        File dir2 = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp\\Dir2");
+        if (!(dir2.isDirectory())) { // проверяет начличие каталога по пути указанному в конструкторе
+            System.out.println(dir2.mkdir() + " mkdir"); // создание каталога, адрес в конструкторе
+        }
+        File file3 = new File(dir2, "new_file.txt");
+        try {
+            if (!(file3.isFile())) { // проверяет начличие файла по пути указанному в конструкторе
+                System.out.println(file3.createNewFile() + " createN"); // создание файла, адрес и имя в конструкторе
+            }
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        File dir_2 = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp\\Dir_2");
+//        if (!(dir_2.isDirectory())) {
+//            System.out.println(dir2.renameTo(dir_2) + " rename"); // переименование каталога,
+//            // новое название в пути в конструкторе
+//        }
+//        System.out.println(dir2.delete()); // удаление только пустого каталога
+
+        // Работа с файлами
+        File mfile = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp\\note3.txt");
+        System.out.println(mfile.getName()); // имя файла
+        System.out.println(mfile.getParent()); // имя родительского каталога
+        if (mfile.exists()) {
+            System.out.println("File exists");
+        }
+        else {
+            System.out.println("File not found");
+        }
+        System.out.println(mfile.length()); // размер файла в байтах
+        if (mfile.canRead()) {
+            System.out.println("Доступен для чтения");
+        }
+        else {
+            System.out.println("Недоступен для чтения");
+        }
+        if (mfile.canWrite()) {
+            System.out.println("Доступен для записи");
+        }
+        else {
+            System.out.println("Недоступен для записи");
+        }
+        System.out.println();
+        File m2file = new File("C:\\Users\\dima\\IdeaProjects\\HelloApp\\file");
+        try {
+            if (!(m2file.isFile())) {
+                m2file.createNewFile();
+            }
+        }
+        catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        fileFolder(dir1);
+        System.out.println();
+
+        // Работа с ZIP-архивами
+        // ZipOutputStream. Запись архивов
+        try(ZipOutputStream dz8 = new ZipOutputStream(
+                new FileOutputStream("C:\\Users\\dima\\IdeaProjects\\HelloApp\\arh.zip"));
+        FileInputStream d8 = new FileInputStream("C:\\Users\\dima\\IdeaProjects\\HelloApp\\note3.txt");
+            FileInputStream d81 = new FileInputStream("C:\\Users\\dima\\IdeaProjects\\HelloApp\\note4.txt")) {
+            ZipEntry dze8 = new ZipEntry("note3.txt");
+            /* Для записи файлов в архив для каждого файла
+             создается объект ZipEntry, в конструктор которого передается имя архивируемого файла, не сам файл*/
+            dz8.putNextEntry(dze8);
+            /*  А чтобы добавить каждый объект ZipEntry в архив, применяется метод putNextEntry()*/
+            dz8.write(d8.readAllBytes()); // записываем считанный массив байтов из потока d8 в поток с архивом dz8
+            dz8.closeEntry(); // закрываем текущую запись для новой записи, закрытие ZipEntry
+            ZipEntry dze81 = new ZipEntry("note4.txt"); // создаём объект для второго файла
+            dz8.putNextEntry(dze81); // добавление второго файла в поток dz8
+            dz8.write(d81.readAllBytes());
+            dz8.closeEntry(); // закрываем текущую запись для новой записи, закрытие ZipEntry
+            System.out.println("Файл добавлен в архив");
+            System.out.println();
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        // Чтение архивов. ZipInputStream
+        try(ZipInputStream d9 = new ZipInputStream(new FileInputStream
+                ("C:\\Users\\dima\\IdeaProjects\\HelloApp\\arh.zip"))) {
+            ZipEntry b;
+            String n;
+            long s;
+            while ((b = d9.getNextEntry()) != null) { // считываем каждый объект типа ZipEntry в архиве
+                n = b.getName();
+                byte[] m = d9.readAllBytes(); // поток представляет объект ZipEntry b, а не весь поток
+                s = m.length;
+                System.out.printf("File name: %s, size: %d\n", n, s);
+                FileOutputStream df9 = new FileOutputStream
+                        ("C:\\Users\\dima\\IdeaProjects\\HelloApp\\Dir1" + n);
+                df9.write(m);
+                // обязательные методы
+                df9.flush();
+                d9.closeEntry();
+                df9.close();
+            }
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        // Класс Console
+    }
+    public static void fileFolder(final File b) { // вывод всех файлов
+        for (final File v:
+             b.listFiles()) {
+            if (v.isDirectory() && !(v.isHidden())) {
+//                System.out.println(v.getName() + " - Каталог");
+                System.out.println(v.getAbsolutePath() + " - Каталог"); // вывод сслылки на каталог
+                fileFolder(v);
+            }
+            else {
+//                System.out.println(v.getName() + " - Файл");
+                System.out.println(v.getAbsolutePath() + " - Файл"); // вывод ссылки на файл
+            }
         }
     }
 }
@@ -297,5 +556,34 @@ class Pesonaj {
         this.age = age;
         this.ves = ves;
         this.married = married;
+    }
+}
+class Pesonaj2 implements Serializable {
+    private String name;
+    private int age;
+    private transient double ves;
+    private transient boolean married; // transient - запрет сериализации, выведет false
+
+    public Pesonaj2(String name, int age, double ves, boolean married) {
+        this.name = name;
+        this.age = age;
+        this.ves = ves;
+        this.married = married;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getVes() {
+        return ves;
+    }
+
+    public boolean isMarried() {
+        return married;
     }
 }
