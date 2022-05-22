@@ -529,6 +529,12 @@ public class Main5 {
         }
 
         // Класс Console
+        Console console = System.console();
+        if (console != null) {
+            String d = console.readLine("Name: ");
+            char[] c = console.readPassword("Password: ");
+            console.printf("Vivod Name: %s, Password: %s\n", d, new String(c));
+        }
     }
     public static void fileFolder(final File b) { // вывод всех файлов
         for (final File v:
