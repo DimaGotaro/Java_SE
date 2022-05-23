@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -286,7 +287,168 @@ public class Main6 {
 
         // Лямбда-выражения
         //Введение в лямбда-выражения
+        Delo oper;
+        oper = ((x, y) -> x + y);
+        int res = oper.calcu(5, 10);
+        System.out.println(res);
+        // то же через анонимные классы
+        Delo oper2 = new Delo() {
+            @Override
+            public int calcu(int x, int y) {
+                return x + y;
+            }
+        };
+        System.out.println(oper2.calcu(10, 6));
+        // короче
+        Delo oper3 = (x, y) -> x * y;
+        System.out.println(oper3.calcu(10, 3));
+        Delo2 delo = () -> 10 + 10; // пустые скобки если нет аргументов
+        System.out.println(delo.calc());
+
+        // Терминальные лямбда-выражения
+        PrintP delo2 = s -> System.out.println(s);
+        delo2.printp("Silbern");
+
+        // Лямбды и локальные переменные
+        // использование переменных уровня класса
+        Delo2 nay = () -> {
+            x = 20;
+            return x + y;
+        };
+        System.out.println(nay.calc()); // 40 + 20 = 60, y статич переменная, вне метода main
+        // локальные переменные на уровне метода
+        int g = 20;
+        int f = 30;
+        Delo2 nay2 = () -> {
+//          g = 25; // нельзя
+            return g + f; // переменная которая используется в лямбдах становятся константами, изменять нельзя
+        };
+//        g = 56; то же нельзя
+        System.out.println(nay2.calc());
+
+        // Блоки кода в лямбда-выражениях
+        Delo oper4 = (x1, y1) -> {
+            if (x1 == 0) {
+                return 0;
+            }
+            else {
+                return x1 / y1;
+            }
+        };
+        System.out.println(oper4.calcu(0, 5));
+        System.out.println(oper4.calcu(6, 3));
+
+        // Обобщенный функциональный интерфейс
+        Tula<Integer> nay3 = (x1, y1) -> x1 + y1;
+        Tula<String> nay4 = (x1, y1) -> {
+            return x1 + y1;
+        };
+        System.out.println(nay3.jeck(5, 10));
+        System.out.println(nay4.jeck("20", "22"));
+        System.out.println();
+
+        // Лямбды как параметры методов
+        // Функциональный интерфейс Expression определяет метод isEqual(), который возвращает true,
+        // если в отношении числа n действует какое-нибудь равенство
+        System.out.println("Сумма всех чётных чисел: ");
+        Sravn rid = n1 -> n1%2==0;
+        int[] mass3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(sum_m(mass3, rid));
+        System.out.println("Сумма нечётных чисел чисел: ");
+        System.out.println(sum_m(mass3, n1 -> n1%2 != 0));
+        System.out.println("Сумма чисел которые делятся на 3 без остатка: ");
+        System.out.println(sum_m(mass3, n1 -> n1%3 == 0));
+        System.out.println();
+
+        // Ссылки на метод как параметры методов
+        Sravn rid2 = Sravn_metod::isChet; // статический, сумма всех чётных
+        int[] mass4 = { -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
+        System.out.println(sum_m(mass4, rid2));
+        Sravn_metod rid22 = new Sravn_metod();
+        System.out.println(sum_m(mass4, rid22::isPoloj)); // через объект, сумма всех положительных
+
+        // Ссылки на конструкторы
+        Int_Ciborg int_c = Ciborg::new; // через лямбда выражения можно создать объект класса,
+        // который не применяет интерфейс
+        Ciborg cib = int_c.constr("Marla");
+        System.out.println(cib.getName());
+        System.out.println();
+
+        // Лямбды как результат методов
+        Delo rid4 = oper(1);
+        System.out.println(rid4.calcu(10, 20)); // через переменную
+        System.out.println(oper(2).calcu(10, 20)); // без переменной
+        System.out.println(oper(3).calcu(6, 2));
+        System.out.println();
+
+        // Встроенные функциональные интерфейсы
+        // Predicate<T> - возвращает значение boolean, по условию
+        Fonk<Integer> rid5 = n1 -> n1 > 0;
+        System.out.println(rid5.fonk(5));
+        Predicate<String> rid6 = x -> x.length() > 4;
+        System.out.println(rid6.test("Bfjflkfn"));
     }
+    static int x = 15;
+    static int y = 40;
+
+    public static int sum_m(int[] mass, Sravn f) {
+        int res = 0;
+        for (int i:
+             mass) {
+            if (f.sravn(i)) {
+                res += i;
+            }
+        }
+        return res;
+    }
+    private static Delo oper(int n) {
+        switch (n) {
+            case 1: return (x1, y1) -> x1 + y1;
+            case 2: return (x1, y1) -> x1 - y1;
+            case 3: return (x1, y1) -> x1 * y1;
+            default: return (x1, y1) -> 0;
+        }
+    }
+}
+interface Delo { // функциональный интерфейс должен содержать только один единственный метод без реализации
+    int calcu(int x, int y);
+}
+interface Delo2 {
+    int calc();
+}
+interface PrintP {
+    public void printp(String s);
+}
+interface Tula<T> {
+    T jeck(T x, T y);
+}
+interface Sravn {
+    boolean sravn(int n);
+}
+class Sravn_metod {
+    static boolean isChet(int n) {
+        return n%2 == 0;
+    }
+    boolean isPoloj(int n) {
+        return n > 0;
+    }
+}
+class Ciborg {
+    private String name;
+    Ciborg(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+}
+interface Int_Ciborg {
+    Ciborg constr(String name); // тип и кол-во параметров должны быть такими же как и в конструкторе класса,
+    // конструктор которго хотим использовать
+}
+// Predicate<T> - возвращает значение boolean, по условию
+interface Fonk<T> {
+    boolean fonk(T n);
 }
 
 
