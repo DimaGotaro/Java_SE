@@ -1,6 +1,7 @@
 package com.company;
 
-import java.util.function.Predicate;
+import java.util.Scanner;
+import java.util.function.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -382,11 +383,52 @@ public class Main6 {
         System.out.println();
 
         // Встроенные функциональные интерфейсы
-        // Predicate<T> - возвращает значение boolean, по условию
+        // Predicate<T> - возвращает значение boolean, по условию. x переменная в методе
         Fonk<Integer> rid5 = n1 -> n1 > 0;
         System.out.println(rid5.fonk(5));
         Predicate<String> rid6 = x -> x.length() > 4;
         System.out.println(rid6.test("Bfjflkfn"));
+
+        // BinaryOperator<T> - принимает в качестве параметра два объекта типа T,
+        // выполняет над ними бинарную операцию и возвращает ее результат также в виде объекта типа T
+        // переменная в методе t, u
+        Fonk2<Integer> rid7 = (x1, y1) -> x1 + y1;
+        System.out.println(rid7.til(7, 13));
+        BinaryOperator<String> rid8 = (x, y) -> x + y;
+        System.out.println(rid8.apply("Майор ", "Гром"));
+
+        // UnaryOperator<T> - принимает один объект
+        Fonk3<Integer> rid9 = x1 -> x1 + 10;
+        System.out.println(rid9.til(5));
+        UnaryOperator<String> rid10 = x -> x + ".txt";
+        System.out.println(rid10.apply("Ridler"));
+
+        // Function<T,R>
+        Fonk4<Integer, String> rid11 = x1 -> x1.toString() + "1";
+        System.out.println(rid11.til(5684));
+        Function<String, Integer> rid12 = x -> x.hashCode() + 1; // вводим строку, получаем её хэш-код
+        System.out.println(rid12.apply("Андатра"));
+
+        // Consumer<T> - метод с одним вводимым значением
+        Fonk5<String> rid13 = x1 -> System.out.println(x1);
+        rid13.til("Power Rengers");
+        Consumer<Integer> rid14 = x -> System.out.println(x);
+        rid14.accept(228);
+
+        // Supplier<T> - ничего не вводит, возвращает объект типа T
+        Fonk6<Ciborg> rid15 = () -> {
+            Scanner in = new Scanner(System.in);
+            return new Ciborg(in.nextLine());
+        };
+//        Ciborg rid16 = rid15.til();
+//        System.out.println(rid16.getName());
+
+        Supplier<Ciborg> rid17 = () -> {
+            Scanner in = new Scanner(System.in);
+            return new Ciborg(in.nextLine());
+        };
+//        Ciborg rid18 = rid17.get();
+//        System.out.println(rid18.getName());
     }
     static int x = 15;
     static int y = 40;
@@ -446,9 +488,24 @@ interface Int_Ciborg {
     Ciborg constr(String name); // тип и кол-во параметров должны быть такими же как и в конструкторе класса,
     // конструктор которго хотим использовать
 }
-// Predicate<T> - возвращает значение boolean, по условию
+// Predicate<T> - возвращает значение boolean, по условию. Условие задаётся в лямбда выражании
 interface Fonk<T> {
     boolean fonk(T n);
+}
+interface Fonk2<T> { // BinaryOperator<T>
+    T til(T x, T y);
+}
+interface Fonk3<T> { // UnaryOperator<T>
+    T til(T x);
+}
+interface Fonk4<T, R> { // Function<T,R>
+    R til(T x);
+}
+interface Fonk5<T> { // Consumer<T>
+    void til(T x);
+}
+interface Fonk6<T> { // Supplier<T>
+    T til();
 }
 
 
