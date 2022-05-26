@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A2_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A2_Thread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A3_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A3_Thread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A_Thread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/B_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/B_Thread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/M_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/M_Thread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/S_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/S_Thread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
