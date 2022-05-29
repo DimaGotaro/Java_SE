@@ -191,18 +191,35 @@ public class Main7 {
         System.out.println();
 
         // Семафоры
-//        Semaphore sem = new Semaphore(2);
-//        Peremen per = new Peremen();
-//        new Thread(new Isp_Sem(per, sem, "Isp_Sem 1")).start();
-//        new Thread(new Isp_Sem(per, sem, "Isp_Sem 2")).start();
-//        new Thread(new Isp_Sem(per, sem, "Isp_Sem 3")).start();
-//        System.out.println();
+        Semaphore sem = new Semaphore(1);
+        Peremen per = new Peremen();
+        Thread jk1 = new Thread(new Isp_Sem(per, sem, "Isp_Sem 1"));
+        Thread jk2 = new Thread(new Isp_Sem(per, sem, "Isp_Sem 2"));
+        Thread jk3 = new Thread(new Isp_Sem(per, sem, "Isp_Sem 3"));
+        jk1.start();
+        jk2.start();
+        jk3.start();
+        try {
+            jk1.join();
+            jk2.join();
+            jk3.join();
+        }
+        catch (InterruptedException ex) {
+            System.out.println(ex.getMessage());
+        }
+        System.out.println();
 
         // Философы
 //        Semaphore sem2 = new Semaphore(2); // за столом максимум 2 философа
 //        for (int i = 0; i < 6; i++) { // 5 философов всего
 //            Thread dt11 = new Thread(new Filosof(sem2, "Философ " + i, 2, i)); // t - приёмы пищи
 //            dt11.start();
+////            try {
+////                dt11.join();
+////            }
+////            catch (InterruptedException ex) {
+////                System.out.println(ex.getMessage());
+////            }
 //        }
 //        System.out.println();
 
@@ -221,11 +238,11 @@ public class Main7 {
         int phase = ph.getPhase();
         ph.arriveAndAwaitAdvance(); // начинаем фазу 1
         System.out.println("Фаза " + phase + " завершена");
-        // заканчивается фаза 1
+//        // заканчивается фаза 1
         phase = ph.getPhase();
         ph.arriveAndAwaitAdvance(); // начинаем фазу 2
         System.out.println("Фаза " + phase + " завершена");
-        // заканчивается фаза 2
+//        // заканчивается фаза 2
         phase = ph.getPhase();
         ph.arriveAndAwaitAdvance(); // начинаем фазу 3
         System.out.println("Фаза " + phase + " завершена");
@@ -237,6 +254,12 @@ public class Main7 {
         for (int i = 0; i < 4; i++) {
             Thread cx4 = new Thread(new Look_Turead(cx2, cx3), "Look_Turead " + i);
             cx4.start();
+            try {
+                cx4.join();
+            }
+            catch (InterruptedException ex) {
+                System.out.println(ex.getMessage());
+            }
         }
 
         // Условия в блокировках
@@ -272,7 +295,7 @@ class S_Thread extends Thread { // создали класс для потока
         System.out.println(Thread.currentThread().getName() + " finished...");
     }
 }
-class M_Thread implements Runnable { // конструктор переопределять нельзя, переопределяем только метод run
+class M_Thread implements Runnable { // переопределяем только метод run
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " started...");
@@ -504,8 +527,8 @@ class Isp_Sem implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println(name + " ожидает подключения");
             sem.acquire();
+            System.out.println(name + " ожидает подключения");
             per.x = 1;
             for (int i = 1; i < 5; i++) {
                 System.out.println(this.name + ": " + per.x);
@@ -623,7 +646,7 @@ class K_Phaser implements Runnable {
         ph.register();
     }
     @Override
-    public void run() {
+    public synchronized void run() {
         System.out.println(name + " выполняет фазу " + ph.getPhase());
         ph.arriveAndAwaitAdvance();
         try {
