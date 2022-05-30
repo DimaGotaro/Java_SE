@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A2_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A2_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A3_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A3_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/A_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/A_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/B_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/B_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Chil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/ComRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/ComRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/ComRes2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/ComRes2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Com_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Com_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Com_Thread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Com_Thread2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Filosof.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Filosof.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/GetEx.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/GetEx.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/GetEx2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/GetEx2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Isp_Sem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Isp_Sem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/K_Phaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/K_Phaser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Look_Turead.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Look_Turead.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/M_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/M_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Magazin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Magazin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Magazin2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Magazin2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Peremen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Peremen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pokyp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pokyp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pokyp2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Pokyp2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/PutEx.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/PutEx.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/S_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/S_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Zavod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Zavod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Zavod2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Zavod2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
