@@ -203,7 +203,7 @@ public class Main4 {
         people13.put(1, "Jack");
         people13.put(2, "Afro");
         people13.put(4, "Ruma");
-        System.out.println(people13.entrySet());
+        System.out.println(people13.entrySet()); // возвращает набор элементов коллекции
         System.out.println(people13.get(2));
         Set<Integer> a6 = people13.keySet();
         System.out.println(a6);

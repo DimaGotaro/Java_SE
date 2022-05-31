@@ -329,6 +329,145 @@ public class Main8 {
         System.out.println();
 
         // Группировка
+        Stream<Phone2> d9 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<String, List<Phone2>> d10 = d9.collect(Collectors.groupingBy(Phone2::getComp)); // назначаем ключ getComp,
+        // объекты с одинаковыми ключами будут сгруппированы в список, которым является содержимое
+        System.out.println(d10);
+        for (Map.Entry<String, List<Phone2>> r:
+                d10.entrySet()) {
+            System.out.println(r.getKey() + ":");
+            for (Phone2 t:
+                 r.getValue()) {
+                System.out.println(t.getName() + " " + t.getPrice() + " " + t.getComp());
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        // Метод Collectors.partitioningBy, группирование по условию
+        Stream<Phone2> d11 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<Boolean, List<Phone2>> d12 = d11.collect(Collectors.partitioningBy(p -> p.getComp()=="Sam"));
+        for (Map.Entry<Boolean, List<Phone2>> e:
+                d12.entrySet()) {
+            if (e.getKey()) {
+                System.out.println("Sam:");
+            }
+            else {
+                System.out.println("Undefined:");
+            }
+            for (Phone2 f:
+                 e.getValue()) {
+                System.out.println(f.getName() + " " + f.getPrice() + " " + f.getComp());
+            }
+            System.out.println();
+        }
+
+        // Метод Coollectors.counting - кол-во элементов в содержимом
+        Stream<Phone2> d13 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<String, Long> d14 = d13.collect(Collectors.groupingBy(Phone2::getComp, Collectors.counting()));
+        for (Map.Entry<String, Long> h:
+                d14.entrySet()) {
+            System.out.println(h.getKey() + "-" + h.getValue());
+        }
+        System.out.println();
+
+        // Метод Collectors.summing - сумма всех чисел в содержимом
+        Stream<Phone2> d15 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<String, Integer> d16 = d15.collect(Collectors.groupingBy(Phone2::getComp,
+                Collectors.summingInt(Phone2::getPrice))); // сумма всех getPrice
+        for (Map.Entry<String, Integer> w:
+                d16.entrySet()) {
+            System.out.println(w.getKey() + "-" + w.getValue());
+        }
+        System.out.println();
+
+        // Методы maxBy и minBy - мин и макс в содержимом
+        Stream<Phone2> d17 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<String, Optional<Phone2>> d18 = d17.collect(Collectors.groupingBy(Phone2::getComp,
+                Collectors.minBy(Comparator.comparing(Phone2::getPrice)))); // минимальное в содержимом из всех getPrice
+        for (Map.Entry<String, Optional<Phone2>> w:
+                d18.entrySet()) {
+            System.out.println(w.getKey() + " min - " + w.getValue().get().getPrice());
+        }
+        System.out.println();
+
+        // Метод summarizing - объединяет в набор значения одного типа в содержимом для разных
+        // действий(getAverage(): возвращает среднее значение
+        //getCount(): возвращает количество элементов в наборе
+        //getMax(): возвращает максимальное значение
+        //getMin(): возвращает минимальное значение
+        //getSum(): возвращает сумму элементов
+        //accept(): добавляет в набор новый элемент)
+        Stream<Phone2> d19 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Samsung2", 300, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 500, "Xiomi"),
+                new Phone2("Poco3", 700, "Xiomi"),
+                new Phone2("Juchka", 800, "Sam"));
+        Map<String, IntSummaryStatistics> d20 = d19.collect(Collectors.groupingBy(Phone2::getComp,
+                Collectors.summarizingInt(Phone2::getPrice)));
+        for (Map.Entry<String, IntSummaryStatistics> w:
+                d20.entrySet()) {
+            System.out.println(w.getKey() + " среднее - " + w.getValue().getAverage()); // вычисляет среднее
+        }
+        System.out.println();
+
+        // Метод mapping - отображение другого типа данных, от имеющегося Phone2 -> String
+        Stream<Phone2> d21 = Stream.of(new Phone2("Motorolla", 500, "Moto"),
+                new Phone2("Samsung", 1000, "Sam"),
+                new Phone2("Poco", 300, "Xiomi"),
+                new Phone2("Poco2", 589, "Xiomi"),
+                new Phone2("Juchka", 894, "Sam"));
+        Map<String, List<String>> d22 = d21.collect(Collectors.groupingBy(Phone2::getComp,
+                Collectors.mapping(Phone2::getName, Collectors.toList())));
+        for (Map.Entry<String, List<String>> r:
+                d22.entrySet()) {
+            System.out.println(r.getKey() + ":");
+            for (String t:
+                    r.getValue()) {
+                System.out.println(t);
+            }
+            System.out.println();
+        }
+
+        // Параллельные потоки
+        Stream<Integer> f1 = Stream.of(1, 2, 3, 4, 5, 6);
+        f1
+                .parallel().forEach(p -> System.out.print(p + "\t")); // вывод в разнобой
+        System.out.println();
+        System.out.println();
+
+        List<String> f2 = Arrays.asList("Sanji", "Bryk", "Chopper", "Robin");
+        System.out.println("Последовательный поток");
+        f2
+                .stream()
+                .forEach(System.out::println);
+        System.out.println();
+        System.out.println("Параллельный поток");
+        f2
+                .parallelStream() // вывод в разнобой
+                .forEach(System.out::println);
     }
 }
 class Phone {

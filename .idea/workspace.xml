@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
