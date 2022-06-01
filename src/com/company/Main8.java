@@ -454,7 +454,8 @@ public class Main8 {
         // Параллельные потоки
         Stream<Integer> f1 = Stream.of(1, 2, 3, 4, 5, 6);
         f1
-                .parallel().forEach(p -> System.out.print(p + "\t")); // вывод в разнобой
+                .parallel()
+                .forEach(p -> System.out.print(p + "\t")); // вывод в разнобой
         System.out.println();
         System.out.println();
 
@@ -468,6 +469,101 @@ public class Main8 {
         f2
                 .parallelStream() // вывод в разнобой
                 .forEach(System.out::println);
+        System.out.println();
+        Stream<Integer> f3 = Stream.of(1, 2, 3);
+        Integer f = f3
+                .parallel() // тот же результат что и в последовательном потоке, можно в параллельный,
+                // операция ассоциативна
+                .reduce((x, y) -> x * y)
+                .get();
+        System.out.println(f);
+        System.out.println();
+
+        // forEachOrdered - сохраняет последовательность
+        List<String> f4 = Arrays.asList("Sanji", "Bryk", "Chopper", "Robin");
+        System.out.println("Параллельный поток");
+        f4
+                .parallelStream() // вывод в разнобой
+                .forEachOrdered(System.out::println);
+        System.out.println();
+        // без сохр последовательности - unordered()
+        List<String> f5 = Arrays.asList("Sanji", "Bryk", "Chopper", "Robin");
+        System.out.println("Параллельный поток");
+        f5
+                .parallelStream()
+                .unordered()
+                .forEach(System.out::println);
+        System.out.println();
+
+        // Параллельные операции над массивами
+        int[] mass = new int[6];
+        Arrays.parallelSetAll(mass, i -> i*10); // добавили в массив с условием, i - это каждый элемент массива
+        for (int o:
+             mass) {
+            System.out.print(o + "\t");
+        }
+        System.out.println();
+        System.out.println();
+
+        int[] mass2 = mass_Set(5);
+        for (int o:
+                mass2) {
+            System.out.print(o + "\t");
+        }
+        System.out.println();
+        System.out.println();
+
+        Phone[] mass3 = new Phone[] {
+                new Phone("Motorolla", 500),
+                new Phone("Samsung", 1000),
+                new Phone("Poco", 300)
+        };
+        Arrays.parallelSetAll(mass3, i -> {
+            mass3[i].setPrice(mass3[i].getPrice() - 100);
+            return mass3[i];
+        });
+        for (Phone o:
+                mass3) {
+            System.out.println(o.getName() + ": " + o.getPrice());
+        }
+        System.out.println();
+
+        // Сортировка
+        int[] mass4 = {9, 1, -1, -56, 24};
+        Arrays.parallelSort(mass4); // сортировка по возрастанию
+        for (int o:
+                mass4) {
+            System.out.print(o + "\t");
+        }
+        System.out.println();
+        System.out.println();
+
+        Phone[] mass5 = new Phone[] {
+                new Phone("Motorolla", 500),
+                new Phone("Samsung", 1000),
+                new Phone("Poco", 300)
+        };
+        Arrays.parallelSort(mass5, new PhoneComp()); // сортировка по компаратору
+        for (Phone o:
+                mass5) {
+            System.out.println(o.getName() + ": " + o.getPrice());
+        }
+        System.out.println();
+
+        // Метод parallelPrefix - сохраняет промежуточные операции
+        int[] mass6 = {1, 2, 3, 4};
+        Arrays.parallelPrefix(mass6, (x, y) -> x * y);
+        for (int o:
+                mass6) {
+            System.out.print(o + "\t");
+        }
+        System.out.println();
+        System.out.println();
+    }
+    public static int[] mass_Set(int size) {
+        int[] val = new int[size];
+        Arrays.parallelSetAll(val, i -> i*2); // i - это каждый элемент массива
+        return val;
     }
 }
 class Phone {
@@ -547,6 +643,17 @@ class Phone3 {
 
     public int getPrice() {
         return price;
+    }
+}
+class PhoneComp implements Comparator<Phone> {
+    @Override
+    public int compare(Phone x, Phone y) {
+        if (x.getPrice() > y.getPrice()) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
     }
 }
 

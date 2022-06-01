@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
+      <change afterPath="$PROJECT_DIR$/demo/com/Mentanit/Hello/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/com/Mentanit/Hello/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -33,6 +39,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7870e7ca-78ca-4e3b-87ed-3002d9adcbb1" />
+        <option name="url" value="https://github.com/DimaGotaro/Java_course.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
