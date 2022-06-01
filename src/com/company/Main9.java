@@ -4,6 +4,8 @@ import com.sun.jdi.Value;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 
 public class Main9 {
     public static void main(String[] args) {
@@ -25,5 +27,27 @@ public class Main9 {
         BigDecimal a2 = BigDecimal.valueOf(38745216888.589);
         BigDecimal a3 = a1.multiply(a2);
         System.out.println(a3);
+        System.out.println();
+
+        // Работа с датами. LocalDate
+        LocalDate b1 = LocalDate.now();
+        System.out.println(b1);
+        System.out.println(b1.getEra());
+        System.out.println(b1.getYear());
+        DayOfWeek b2 = b1.getDayOfWeek();
+        System.out.println(b2); // день недели
+        LocalDate b3 = LocalDate.of(1996, 9, 28);
+        System.out.println(b3.getDayOfWeek());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
