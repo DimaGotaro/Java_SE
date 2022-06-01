@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/demo/com/Mentanit/Hello/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/com/Mentanit/Hello/Hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Main9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Main8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone2Comp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloApp/com/company/Phone3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/demo/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main9.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +59,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="CodeWithMe" />
   </component>
-  <component name="RunManager" selected="Application.Main8">
+  <component name="RunManager" selected="Application.Main9">
     <configuration name="Main2" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main2" />
       <module name="HelloApp" />
@@ -135,8 +125,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Test" />
+    <configuration name="Main9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main9" />
       <module name="HelloApp" />
       <extension name="coverage">
         <pattern>
@@ -150,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main9" />
         <item itemvalue="Application.Main8" />
         <item itemvalue="Application.Main7" />
         <item itemvalue="Application.Main6" />
         <item itemvalue="Application.Main5" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
