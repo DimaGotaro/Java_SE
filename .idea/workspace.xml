@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_SE.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -61,7 +63,7 @@
   <component name="RunManager" selected="Application.Main9">
     <configuration name="Main2" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main2" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -74,7 +76,7 @@
     </configuration>
     <configuration name="Main5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main5" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -87,7 +89,7 @@
     </configuration>
     <configuration name="Main6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main6" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -100,7 +102,7 @@
     </configuration>
     <configuration name="Main7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main7" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -113,7 +115,7 @@
     </configuration>
     <configuration name="Main8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main8" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -126,7 +128,7 @@
     </configuration>
     <configuration name="Main9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main9" />
-      <module name="HelloApp" />
+      <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
