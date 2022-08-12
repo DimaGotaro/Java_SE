@@ -210,18 +210,18 @@ public class Main7 {
         System.out.println();
 
         // Философы
-//        Semaphore sem2 = new Semaphore(2); // за столом максимум 2 философа
-//        for (int i = 0; i < 6; i++) { // 5 философов всего
-//            Thread dt11 = new Thread(new Filosof(sem2, "Философ " + i, 2, i)); // t - приёмы пищи
-//            dt11.start();
-////            try {
-////                dt11.join();
-////            }
-////            catch (InterruptedException ex) {
-////                System.out.println(ex.getMessage());
-////            }
-//        }
-//        System.out.println();
+        Semaphore sem2 = new Semaphore(2); // за столом максимум 2 философа
+        for (int i = 0; i < 6; i++) { // 5 философов всего
+            Thread dt11 = new Thread(new Filosof(sem2, "Философ " + i, 2, i)); // t - приёмы пищи
+            dt11.start();
+            try {
+                dt11.join();
+            }
+            catch (InterruptedException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        System.out.println();
 
         // Обмен между потоками. Класс Exchanger
         // передача сообщения между двумя классами

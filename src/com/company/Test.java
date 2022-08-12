@@ -2,11 +2,12 @@ package com.company;
 import java.util.Scanner;
 
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Person2 tom = new Person2("Tom");
         System.out.println(tom.hashCode());
         System.out.println(tom.hashCode2());
         System.out.println(tom.name.hashCode());
+
         // Исключения
         Scanner in = new Scanner(System.in);
         try {
@@ -81,7 +82,7 @@ public class Test {
         }
         System.out.println();
         // сортировка массива
-        int[] mas = new int[] {5, 3, 1, 8, 2, 7 };
+        int[] mas = new int[] {5, 3, 1, 8, 2, 7};
         for (int i = 0; i < mas.length; i++) {
             int min = mas[i];
             int min_i = i;
