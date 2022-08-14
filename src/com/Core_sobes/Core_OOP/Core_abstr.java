@@ -1,6 +1,6 @@
 package com.Core_sobes.Core_OOP;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.Arrays;
 
 public abstract class Core_abstr {
@@ -189,11 +189,34 @@ enum Day {
                 '}';
     }
 }
-class Singl {
+class Singl implements Serializable {
     private static final Singl singl = new Singl();
+    @Serial
+    private static final long serialVersionUID = 3L;
+    private String f;
+    public Singl(String f) {
+        this.f = f;
+    }
+    public String getF() {
+        return f;
+    }
+    public void setF(String f) {
+        this.f = f;
+    }
     private Singl() {
     }
     public static Singl getSingl() {
+        return singl;
+    }
+    @Override
+    public String toString() {
+        return "Singl{" +
+                "f='" + f + '\'' +
+                '}';
+    }
+    @Serial
+    protected Object readResolve() throws ObjectStreamException {
+        // при десериализации возвращает этот же объект
         return singl;
     }
 }
@@ -209,5 +232,120 @@ class Lazy_Singl {
     }
 }
 class Ser implements Serializable {
-    
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private String o;
+    private /*transient*/ Ser1 ser1;
+    // transient - поле не будет сериализовано, ему будет присвоено null
+    public Ser (Ser ser) { // конструктор копирования
+        this.o = ser.o;
+        this.ser1 = new Ser1(ser.ser1.getG());
+    }
+    public Ser(String o, Ser1 ser1) {
+        this.o = o;
+        this.ser1 = ser1;
+    }
+    public String getO() {
+        return o;
+    }
+    public void setO(String o) {
+        this.o = o;
+    }
+    public Ser1 getSer1() {
+        return ser1;
+    }
+    public void setSer1(Ser1 ser1) {
+        this.ser1 = ser1;
+    }
+    @Override
+    public String toString() {
+        return "Ser{" +
+                "o='" + o + '\'' +
+                ", ser1=" + ser1 +
+                '}';
+    }
+}
+class Ser1 implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 2L;
+    // все поля которые ссылаются на объекты других классов должны применять Serializable и
+    // иметь поле serialVersionUID
+    private String g;
+    public Ser1(String g) {
+        this.g = g;
+    }
+    public String getG() {
+        return g;
+    }
+    public void setG(String g) {
+        this.g = g;
+    }
+    @Override
+    public String toString() {
+        return "Ser1{" +
+                "g='" + g + '\'' +
+                '}';
+    }
+}
+class Ser2 implements Externalizable {
+    @Serial
+    private static final long serialVersionUID = 4L;
+    private String d;
+    public Ser2(String d) {
+        this.d = d;
+    }
+    public String getD() {
+        return d;
+    }
+    public void setD(String d) {
+        this.d = d;
+    }
+    public Ser2() {
+    } // нужен обязательно
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeObject(getD());
+    }
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        d = (String) in.readObject();
+    }
+    @Override
+    public String toString() {
+        return "Ser2{" +
+                "d='" + d + '\'' +
+                '}';
+    }
+}
+class Ser_main {
+    public static void main(String[] args) {
+        Ser dima = new Ser("Dima", new Ser1("Grande"));
+        Singl singl = Singl.getSingl();
+        singl.setF("Lampasy");
+        Ser2 gargantua = new Ser2("Gargantua");
+
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(
+                "C:\\Users\\dima\\IdeaProjects\\Java_SE\\src\\com\\Core_sobes\\Core_OOP\\serv.ser"));
+        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(
+                "C:\\Users\\dima\\IdeaProjects\\Java_SE\\src\\com\\Core_sobes\\Core_OOP\\serv.ser")))
+        {
+            objectOutputStream.writeObject(dima); // сохранили состояние объекта
+            objectOutputStream.writeObject(singl);
+            objectOutputStream.writeObject(gargantua);
+
+            Ser dima1 = (Ser) objectInputStream.readObject();
+            System.out.println(dima1.toString());
+            Singl singl1 = (Singl) objectInputStream.readObject();
+            System.out.println(singl1.toString());
+            System.out.println(singl == singl1);
+            // без readResolve() - false, новый объект Singleton-на!
+            // с readResolve() - true, объект тот же
+
+            Ser2 gargantua1 = (Ser2) objectInputStream.readObject();
+            System.out.println(gargantua1.toString());
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
