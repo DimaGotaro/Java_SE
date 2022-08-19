@@ -458,6 +458,7 @@ class Magazin {
     synchronized void get() {
         while (prodyct < 1) {
             try {
+                System.out.println("Wait");
                 wait();
             }
             catch (InterruptedException ex) {
@@ -467,11 +468,14 @@ class Magazin {
         prodyct--;
         System.out.println("Покупатель забрал 1 товар");
         System.out.println("На складе осталось товара: " + prodyct);
-        notify();
+        if (prodyct == 0) {
+            notify();
+        }
     }
-    synchronized void put() {
+    synchronized void put(int i, int g) {
         while (prodyct >= 3) {
             try {
+                System.out.println("Wait");
                 wait();
             }
             catch (InterruptedException ex) {
@@ -481,7 +485,9 @@ class Magazin {
         prodyct++;
         System.out.println("Производитель добавил 1 товар");
         System.out.println("На складе осталось товара: " + prodyct);
-        notify();
+        if (prodyct == 3 | i == g - 1) {
+            notify();
+        }
     }
 }
 class Pokyp implements Runnable {
@@ -492,7 +498,8 @@ class Pokyp implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 9; i++) {
+            System.out.println("get");
             mag.get();
         }
     }
@@ -505,8 +512,10 @@ class Zavod implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 1; i < 6; i++) {
-            mag.put();
+        int g = 6;
+        for (int i = 1; i < 9; i++) {
+            System.out.println("put");
+            mag.put(i, g);
         }
     }
 }
@@ -753,6 +762,7 @@ class Pokyp2 implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i < 6; i++) {
+//            System.out.println("get");
             mag.get();
         }
     }
@@ -766,6 +776,7 @@ class Zavod2 implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i < 6; i++) {
+//            System.out.println("put");
             mag.put();
         }
     }
