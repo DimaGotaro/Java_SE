@@ -349,3 +349,21 @@ class Ser_main {
         }
     }
 }
+class SinglS {
+    private static volatile SinglS inst;
+
+    private SinglS() {
+    }
+
+    public static SinglS getInst() {
+        SinglS locinst = inst;
+        if (locinst == null) {
+            synchronized (SinglS.class) {
+                if (locinst == null) {
+                    inst = locinst = new SinglS();
+                }
+            }
+        }
+        return locinst;
+    }
+}

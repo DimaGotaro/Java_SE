@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_col.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser_main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser_main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/serv.ser" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/serv.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main7.java" afterDir="false" />
-    </list>
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Spring_Boot",
+    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Spring",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "Errors"
   }
@@ -164,7 +155,7 @@
       <updated>1647691289773</updated>
       <workItem from="1656878255676" duration="6151000" />
       <workItem from="1659628891698" duration="92199000" />
-      <workItem from="1660334236533" duration="64995000" />
+      <workItem from="1660334236533" duration="65083000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
