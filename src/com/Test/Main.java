@@ -10,10 +10,10 @@ public class Main {
     private static final HashMap<String, String> priorityWord = new HashMap<>();
 
     static {
-        Collections.addAll(deleteWord, "в", "с", "у", "к", "на", "за", "до", "по", "от",
-                "из", "под", "над", "про", "без", "для", "через");
+        Collections.addAll(deleteWord, "РІ", "СЃ", "Сѓ", "Рє", "РЅР°", "Р·Р°", "РґРѕ", "РїРѕ", "РѕС‚",
+                "РёР·", "РїРѕРґ", "РЅР°Рґ", "РїСЂРѕ", "Р±РµР·", "РґР»СЏ", "С‡РµСЂРµР·");
 
-        priorityWord.put("бетон с присадкой", "цемент");
+        priorityWord.put("Р±РµС‚РѕРЅ СЃ РїСЂРёСЃР°РґРєРѕР№", "С†РµРјРµРЅС‚");
     }
 
     public static void main(String[] args) {
