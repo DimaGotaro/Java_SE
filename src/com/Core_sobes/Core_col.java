@@ -81,9 +81,14 @@ public class Core_col {
         System.out.println(bob);
 
         // TreeSet - сортировка по алфавиту или величине
+        System.out.println("TreeSet.................................");
         Set<String> set1 = new TreeSet<>(Arrays.asList("Job", "Bob", "Demo", "Demo"));
         set1.add("Aumo");
         System.out.println(set1);
+
+        TreeSet<Integer> set11 = new TreeSet<>(Arrays.asList(1, 2, 4, 5, 6, 7));
+        System.out.println(set11.floor(3));
+        System.out.println("TreeSet.................................");
 
         // LinkedHashSet - элементы хранятся в порядке добавления
         Set<String> set2 = new LinkedHashSet<>(Arrays.asList("Job", "Bob", "Demo", "Demo"));

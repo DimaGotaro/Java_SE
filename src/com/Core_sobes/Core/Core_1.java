@@ -4,6 +4,7 @@ import com.Core_sobes.Core2.Core_2_1;
 
 public class Core_1 {
     public String a = "h";
+    int s;
     String b;
     protected Core_2_1 c;
     protected String cc;
@@ -20,6 +21,7 @@ public class Core_1 {
     public Core_1(String a) {
         this.a = a;
     }
+    public static void sabc() {}
 
     public Core_1() {
     }

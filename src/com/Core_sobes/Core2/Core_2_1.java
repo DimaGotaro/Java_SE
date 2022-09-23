@@ -22,7 +22,8 @@ public class Core_2_1 extends Core_1{
         String a = core_1.a; // только через объект!
         System.out.println(a);
 //        String b = core_1.b; // без модификатора, внешний пакет
-//        Core_2_1 c = core_1.c; // protected - статический метод!
+//        Core_2_1 c2 = core_1.c; // protected в статическом методе, не доступен!
+//        core_1.cc;
 //        core_1.d // d - private
 
 //        core_1.abc(); // - ошибка
@@ -37,6 +38,7 @@ public class Core_2_1 extends Core_1{
         String cc21 = Core_1.cc2;
         String a1 = a;
         String a21 = a2;
+        Core_1.sabc();
     }
 
     @Override
@@ -74,6 +76,12 @@ class Core_2_2 {
 //        core_2_12.abc(); // ошибка, protected
 
         Core_2_1 core21 = (Core_2_1) core_2_12;
+
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        for (StackTraceElement f :
+                stackTraceElements) {
+            System.out.println(f);
+        }
     }
     public void cr() {
         Core_2_1 core_2_1 = new Core_2_1("1", "2");

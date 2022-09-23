@@ -53,7 +53,7 @@ public class Main5 {
             fik2 = new FileInputStream("C:\\Users\\dima\\Desktop\\ит.txt");
             System.out.println("Кол-во байтов доступных для считывания(2): " + fik2.available());
             byte[] nutter = new byte[fik2.available()]; // кол-во ячеек
-            fik2.read(nutter, 0, nutter.length);
+            int read = fik2.read(nutter, 0, nutter.length);
             for (byte c:
                     nutter) {
                 System.out.print((char) c);
