@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Coll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Good.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Immutable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/POJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/StackTrace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Stream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Test/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Test/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_1$Core_v1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_1$Core_v1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_11.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_col.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_col.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/PrComp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/PrComp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D.class" afterDir="false" />
@@ -67,10 +52,10 @@
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Main3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Main3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Persona.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company3/Persona2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company3/Persona2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core2/Core_2_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core2/Core_2_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core_col.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_col.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +221,7 @@
       <workItem from="1661971540631" duration="1587000" />
       <workItem from="1662045664377" duration="2498000" />
       <workItem from="1662548347228" duration="5726000" />
-      <workItem from="1662884963015" duration="89439000" />
+      <workItem from="1662884963015" duration="101287000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>

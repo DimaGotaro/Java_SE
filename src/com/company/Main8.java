@@ -282,7 +282,7 @@ public class Main8 {
         // Обработка полученного значения
         Stream<Integer> c19 = Stream.of(1, 6, 7, 3);
         Optional<Integer> c20 = c19.min(Integer::compare);
-        c20.ifPresent(p -> System.out.println(p)); // 1, если в Optional есть значение, то выполняется действие
+        c20.ifPresent(System.out::println); // 1, если в Optional есть значение, то выполняется действие
 
         Stream<Integer> c21 = Stream.of();
         Optional<Integer> c22 = c21.min(Integer::compare);

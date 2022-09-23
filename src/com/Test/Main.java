@@ -11,7 +11,7 @@ public class Main {
 
     static {
         Collections.addAll(deleteWord, "в", "с", "у", "к", "на", "за", "до", "по", "от",
-                "из", "под", "над", "про", "без", "для", "через");
+                "из", "под", "над", "про", "без", "для", "через", "вместе");
 
         priorityWord.put("бетон с присадкой", "цемент");
     }
@@ -23,21 +23,21 @@ public class Main {
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
 
-            String[] allArray = bufferedReader.lines().toArray(String[]::new);
-            long i = Long.parseLong(allArray[0]);
+            List<String> allArray = bufferedReader.lines().toList();
+            long i = Long.parseLong(allArray.get(0));
 
-            String[] firstArray = Arrays.stream(allArray)
+            List<String> firstArray = allArray.stream()
                     .skip(1L)
                     .limit(i)
-                    .toArray(String[]::new);
+                    .toList();
 
-            String[] secondArray = Arrays.stream(allArray)
+            List<String> secondArray = allArray.stream()
                     .skip(2L + i)
-                    .toArray(String[]::new);
+                    .toList();
 
-            String[] result = Arrays.stream(firstArray)
+            List<String> result = firstArray.stream()
                     .map(x -> comparison(x, secondArray))
-                    .toArray(String[]::new);
+                    .toList();
 
             for (String s : result) {
                 bufferedWriter.write(s);
@@ -47,9 +47,12 @@ public class Main {
             e.printStackTrace();
         }
     }
-    public static String comparison(String lineFirstArray, String[] secondArray) {
+    public static String comparison(String lineFirstArray, List<? extends String> secondArray) {
 
-        String lineFirstArrayLower = lineFirstArray.toLowerCase();
+        String lineFirstArrayLower = lineFirstArray
+                .replaceAll("[()\\[\\]<>]", "")
+                .replaceAll("\\s*(\\s)\\s*", " ")
+                .toLowerCase();
 
         for (String lineSecondArray : secondArray) {
 
@@ -58,10 +61,17 @@ public class Main {
             priorityWord.get(lineFirstArrayLower).equalsIgnoreCase(lineSecondArrayLower)) {
                 return new String(new StringBuilder(lineFirstArray).append(" : ").append(lineSecondArray));
             }
-
-            for (String wordFirst : lineFirstArrayLower.split(" ")) {
+            for (String wordFirst : lineFirstArrayLower.split("\\s*(\\s|,|!|\\.)\\s*")) {
+                int j = 0;
+                if (wordFirst.length() == 6) {
+                    j = 1;
+                } else if (wordFirst.length() == 7) {
+                    j = 2;
+                } else if (wordFirst.length() > 7) {
+                    j = 3;
+                }
                 if (!deleteWord.contains(wordFirst) &&
-                        lineSecondArrayLower.contains(wordFirst.substring(0, wordFirst.length() - 1))) {
+                        lineSecondArrayLower.contains(wordFirst.substring(0, wordFirst.length() - j))) {
                     return new String(new StringBuilder(lineFirstArray).append(" : ").append(lineSecondArray));
                 }
             }
