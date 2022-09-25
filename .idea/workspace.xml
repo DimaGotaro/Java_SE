@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/Test/Задание.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Test/Main1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Test/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Test/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,45 +65,38 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE/src/com/Test/output.txt",
+    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Test",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dima\IdeaProjects\Java_SE\src\com\Test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dima\IdeaProjects\Java_SE\src\com\Test" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.Test" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.App" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Client" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Test.Main" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Test.Main1" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
@@ -118,19 +121,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Solution" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Stream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Stream" />
       <module name="Java_SE" />
@@ -144,13 +134,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.Test.F" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Test.F" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.Test.T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Test.T" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main1" />
+        <item itemvalue="Application.com.Test.F" />
+        <item itemvalue="Application.com.Test.T" />
         <item itemvalue="Application.Stream" />
-        <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +184,7 @@
       <workItem from="1661971540631" duration="1587000" />
       <workItem from="1662045664377" duration="2498000" />
       <workItem from="1662548347228" duration="5726000" />
-      <workItem from="1662884963015" duration="101789000" />
+      <workItem from="1662884963015" duration="156915000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>

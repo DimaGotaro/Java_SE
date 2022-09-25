@@ -1,12 +1,9 @@
 package com.Test;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class Main {
+public class Main1 {
 
     public static void main(String[] args) {
         String inputFile = "C:\\Users\\dima\\IdeaProjects\\Java_SE\\src\\com\\Test\\input.txt";
@@ -38,24 +35,33 @@ public class Main {
 
     public static List<String> comparison(List<String> firstArray, List<? extends String> secondArray) {
 
-        List<List<Integer>> listSecond = new ArrayList<>(secondArray.size());
+        List<Map<String, Integer>> listMap = new ArrayList<>(firstArray.size());
 
-        for (String lineSecondArray : secondArray) {
-            String lineSecondArrayLower = replaceInLineAndLower(lineSecondArray);
-            List<Integer> listFirst = new ArrayList<>(firstArray.size());
+        for (String lineFirstArray : firstArray) {
+            String lineFirstArrayLower = replaceInLineAndLower(lineFirstArray);
+            HashMap<String, Integer> countMap = new HashMap<>();
 
-            for (String lineFirstArray : firstArray) {
-                String lineFirstArrayLower = replaceInLineAndLower(lineFirstArray);
+            for (String lineSecondArray : secondArray) {
+                String lineSecondArrayLower = replaceInLineAndLower(lineSecondArray);
                 int count = 0;
 
-                for (char cF : lineSecondArrayLower.toCharArray()) {
+                for (char cF : lineFirstArrayLower.toCharArray()) {
 
-                    if (lineFirstArrayLower.contains(String.valueOf(cF))) {
+                    if (lineSecondArrayLower.contains(String.valueOf(cF))) {
                         count++;
-                        lineFirstArrayLower =
-                                lineFirstArrayLower.replaceFirst(String.valueOf(cF), "");
+                        lineSecondArrayLower =
+                                lineSecondArrayLower.replaceFirst(String.valueOf(cF), "");
                     }
                 }
+                countMap.put(lineSecondArray, count);
+            }
+            listMap.add(countMap);
+        }
+        List<List<Integer>> listSecond = new ArrayList<>();
+        for (String lineSecondArray : secondArray) {
+            List<Integer> listFirst = new ArrayList<>();
+            for (Map<String, Integer> countMap : listMap) {
+                Integer count = countMap.get(lineSecondArray);
                 listFirst.add(count);
             }
             listSecond.add(listFirst);
