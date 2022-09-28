@@ -1,4 +1,4 @@
-package com.Test;
+package com.Test.InputOut.other;
 
 import java.io.*;
 import java.util.*;

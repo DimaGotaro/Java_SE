@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/Test/Main1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Test/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Test/input2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Main1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/Main1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/Задание.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/other/Задание.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Test",
+    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "File.Encoding"
   }
@@ -184,7 +182,8 @@
       <workItem from="1661971540631" duration="1587000" />
       <workItem from="1662045664377" duration="2498000" />
       <workItem from="1662548347228" duration="5726000" />
-      <workItem from="1662884963015" duration="156915000" />
+      <workItem from="1662884963015" duration="156957000" />
+      <workItem from="1664399934993" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
