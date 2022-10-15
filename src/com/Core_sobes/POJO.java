@@ -2,7 +2,7 @@ package com.Core_sobes;
 
 import java.util.Objects;
 
-public class POJO {
+public class POJO implements Cloneable {
     private Long id;
     private String name;
 
@@ -38,5 +38,21 @@ public class POJO {
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
+    }
+
+    @Override
+    public POJO clone() {
+        try {
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return (POJO) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
+}
+class D {
+    public static void main(String[] args) {
+        POJO a;
+        POJO f = new POJO(2L, "f");
     }
 }
