@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Collections/Coll_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" afterDir="false" />
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="57">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Core2/Patterns/Porojd/Singl/Singleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Coll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/POJO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/POJO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Main2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/input2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/Задание.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Coll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/POJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/POJO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Algoritm/Alg1.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +17,7 @@
       <list>
         <option value="module-info" />
         <option value="Enum" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -64,13 +55,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE",
+    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Spring_Boot_App",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright.filetypes.JAVA"
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,7 +83,7 @@
       <recent name="com.Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.G">
+  <component name="RunManager" selected="Application.M">
     <configuration name="Coll_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Collections.Coll_1" />
       <module name="Java_SE" />
@@ -113,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Test.Main" />
+    <configuration name="M" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core2.Patterns.Porojd.Singl.M" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Test.*" />
+          <option name="PATTERN" value="com.Core2.Patterns.Porojd.Singl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,8 +123,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Test.Main1" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Test.Main" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
@@ -167,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.M" />
         <item itemvalue="Application.G" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Coll_1" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main1" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +188,10 @@
       <workItem from="1662548347228" duration="5726000" />
       <workItem from="1662884963015" duration="156957000" />
       <workItem from="1664399934993" duration="443000" />
-      <workItem from="1664474646917" duration="70205000" />
+      <workItem from="1664474646917" duration="72102000" />
+      <workItem from="1668094148116" duration="73528000" />
+      <workItem from="1668607097702" duration="101124000" />
+      <workItem from="1670938151577" duration="16051000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649853079857</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="57">
+      <created>1665824226919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665824226919</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +227,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="11" />
-    <option name="LAST_COMMIT_MESSAGE" value="11" />
+    <MESSAGE value="57" />
+    <option name="LAST_COMMIT_MESSAGE" value="57" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
