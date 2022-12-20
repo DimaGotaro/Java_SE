@@ -55,6 +55,7 @@ class M {
         Singleton.getInstance().addLog("1 log...");
         Singleton.getInstance().addLog("2 log...");
         Singleton.getInstance().addLog("3 log...");
+        Singleton.getInstance().addLog("4 log...");
 
         System.out.println(Singleton.getInstance().getLog());
 
