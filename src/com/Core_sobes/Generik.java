@@ -9,27 +9,62 @@ public class Generik {
     public static void main(String[] args) {
         Generik generik = new Generik();
 
-        generik.addM(new ArrayList<Object>());
-        generik.addM(new ArrayList<Number>());
-//        core_col.addM(new ArrayList<Integer>());
+        generik.addM(new ArrayList<>());
+        generik.addM(new ArrayList<>());
         System.out.println();
 
-        ArrayList<Integer> integers = new ArrayList<Integer>();
+        List<? super Number> list = new ArrayList<>();
+        list.add(5.5d);
+        Object object = list.get(0);
+        System.out.println(object);
+
+        List<? extends Number> list2 = new ArrayList<>();
+        Number number = list2.get(0);
+        System.out.println(number);
+//        list2.add(new Object());
+//        list2.add(6);
+
+//        list2 = list;
+//        list = list2;
+//        List<? extends Number> list3 = list;
+        List<? extends Number> list4 = list2;
+
+        ArrayList<Integer> integers = new ArrayList<>();
         integers.add(5);
         generik.addM2(integers);
-        ArrayList<Number> numbers = new ArrayList<Number>();
+//        generik.addM(integers);
+        ArrayList<Object> numbers2 = new ArrayList<>();
+//        generik.addM2(numbers2);
+        generik.addM(numbers2);
+        ArrayList<Number> numbers = new ArrayList<>();
         numbers.add(5);
         generik.addM2(numbers);
-//        core_col.addM2(new ArrayList<Object>());
+
+        /* не можем положить в коллекцию Integer объект Number */
+//        ArrayList<Number> numbers1 = integers;
+//        ArrayList<Integer> integers1 = numbers;
+
+        List<? extends Number> list5 = integers;
+        Number number1 = list5.get(0);
+//        list5.add(45);
+        List<? extends Number> list7 = numbers;
+//        List<? extends Number> list7 = numbers2;
+        List<? super Number> list6 = numbers2;
+        list6.add(67);
+        list6.add(67.5);
+//        list6.add(new Object());
 
         S<? extends B> s = new S<C>();
 //        s.setV(new C());
+//        s.setV(new A());
+//        s.setV(new B());
         B v = s.getV();
         System.out.println(v);
 
         S<? super B> s2 = new S<A>();
         s2.setV(new C());
         s2.setV(new B());
+//        s2.setV(new A());
         Object v1 = s2.getV();
         System.out.println(v1);
 

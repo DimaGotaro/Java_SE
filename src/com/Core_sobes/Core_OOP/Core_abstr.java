@@ -115,19 +115,23 @@ class Core_n1 extends Core_n {
         System.out.println(Day.A.ordinal());
 
         Singl singl = Singl.getSingl();
+
+        String a1 = Core_i.a;
     }
 }
 interface Core_i {
     String a = "Corsika";
     void aaa();
-    default void bbb() { }
+    default void bbb() {
+        ccc();
+    }
     private void ccc() { }
     static void ddd() { }
-    default void ggg() {}
+    default void ggg() { }
 }
 interface Core_i1 {
     void aaa2();
-    default void bbb() {}
+    default void bbb() { }
 }
 class Core_a4 implements Core_i, Core_i1 {
     @Override
@@ -151,6 +155,7 @@ class Core_ob extends Core_abstr implements Core_i {
     public Core_ob(String a) {
         super(a);
     }
+
     @Override
     public void vvv() {
 
@@ -190,6 +195,9 @@ enum Day {
     }
 }
 class Singl implements Serializable {
+    public static void main(String[] args) {
+        System.out.println(Day.A.ordinal());
+    }
     private static final Singl singl = new Singl();
     @Serial
     private static final long serialVersionUID = 3L;

@@ -1,4 +1,4 @@
-package com.Core2.Patterns.Porojd.Singl;
+package com.Patterns.Porojd.Singl;
 
 public class Singleton {
 
@@ -45,8 +45,25 @@ class Singleton3 {
         return localInstance;
     }
 }
+class Singleton4 {
+    public static Singleton4 getInstance() {
+        return Singl.singleton4;
+    }
+    private static class Singl{
+        private static final Singleton4 singleton4 = new Singleton4();
+    }
+    private Singleton4() { }
+    static class Sd {
+        String f;
+        static String g;
+        static void d() {}
+    }
+}
 class M {
     public static void main(String[] args) {
+        Singleton4.Sd.d();
+        String g = Singleton4.Sd.g;
+
         Singleton instance = Singleton.getInstance();
         System.out.println(instance);
         System.out.println(Singleton.getInstance());

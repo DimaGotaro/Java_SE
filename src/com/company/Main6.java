@@ -103,7 +103,7 @@ public class Main6 {
         as5 = as5.trim(); // удаляет пробелы
         System.out.println(as5);
         String as6 = "Vanderreih";
-        System.out.println(as6.substring(6)); // возвращает символы из сироки начиная с 6 индекса
+        System.out.println(as6.substring(6)); // возвращает символы из строки начиная с 6 индекса
         System.out.println(as6.substring(0, 6)); // возвращает с 0 по 6 индексы
         byte[] bytes = as6.getBytes(); // стоку в байты
         for (byte b:

@@ -43,7 +43,6 @@ class Core_11 {
     String b;
     protected String c1;
     private String d;
-
     protected void abc() {
         System.out.println("Abc!");
     }

@@ -1,5 +1,6 @@
 package com.Core_sobes;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serial;
 
@@ -8,16 +9,19 @@ public class Exp {
         throw new Exception("error");
     }
 
-    public Exp() throws IOException {
+    public Exp() throws ReflectiveOperationException, IOException {
 
     }
 }
 class F extends Exp{
     @Override
-    public void vvv() throws NullPointerException {
+    public void vvv() throws IOException {
+//        в переопределённом методе можем добавить исключение, такое же, либо ниже
+//        по иерархии!
     }
 
     public F() throws Exception {
+        /* обязаны добавить, такое же, либо выше по иерархии*/
         super();
     }
 }
@@ -26,6 +30,16 @@ class G {
         System.out.println("1");
 //        new Exp().vvv();
         System.out.println("2");
+        try {
+            new F().vvv();
+
+            /* блок finally не будет выполнен. Завершение программы из-за ошибки */
+//            System.exit(0);
+//            while (true) {
+//            }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
 
         System.out.println("3");
         try {

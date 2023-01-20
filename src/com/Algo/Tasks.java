@@ -1,11 +1,10 @@
-package com.Core_sobes;
+package com.Algo;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Core_ex_1 {
+public class Tasks {
     public static void main(String[] args) {
         Integer[] mass = {1,3,4,5,7};
         System.out.println(Arrays.toString(mass));
@@ -173,9 +172,9 @@ public class Core_ex_1 {
         }
         System.out.println(Arrays.toString(mass3));
 
-        Core_ex_1 core_ex_1 = new Core_ex_1();
+        Tasks tasks = new Tasks();
         int q = 1;
-        core_ex_1.sss(q);
+        tasks.sss(q);
         System.out.println(q);
 
         Integer q1 = 129;
