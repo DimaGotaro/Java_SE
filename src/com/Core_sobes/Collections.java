@@ -1,9 +1,9 @@
-package com.Core_sobes.Collections;
+package com.Core_sobes;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Coll_1 {
+public class Collections {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<>();
         strings.add("we");
@@ -100,7 +100,7 @@ public class Coll_1 {
         hashMap1.put(47, "tyt3");
         hashMap1.get(46);
 
-        Map<Exampl, Integer> examplIntegerMap = Collections.synchronizedMap(hashMap);
+        Map<Exampl, Integer> examplIntegerMap = java.util.Collections.synchronizedMap(hashMap);
 
         TreeSet<String> treeSet = new TreeSet<>();
 

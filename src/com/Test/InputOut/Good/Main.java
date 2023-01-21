@@ -61,17 +61,20 @@ public class Main {
 
     public static List<String> comparison(List<String> firstArray,
                                           List<String> secondArray) {
+        TreeMap<String, Integer> treeMapCount = new TreeMap<>((String o1, String o2) ->
+                Integer.parseInt(o1.split(" ")[0]) < Integer.parseInt(o2.split(" ")[0])
+        ? -1 : 1);
 
-        TreeMap<String, Integer> treeMapCount = new TreeMap<>((String o1, String o2) -> {
-            double s1 = Double.parseDouble(o1.split(" ")[0]);
-            double s2 = Double.parseDouble(o2.split(" ")[0]);
-            if (s1 < s2) {
-                return -1;
-            }
-            else {
-                return 1;
-            }
-        });
+//        TreeMap<String, Integer> treeMapCount = new TreeMap<>((String o1, String o2) -> {
+//            double s1 = Double.parseDouble(o1.split(" ")[0]);
+//            double s2 = Double.parseDouble(o2.split(" ")[0]);
+//            if (s1 < s2) {
+//                return -1;
+//            }
+//            else {
+//                return 1;
+//            }
+//        });
 
         for (int indexSecond = 0; indexSecond < secondArray.size(); indexSecond++) {
             String lineSecondArrayLower = replaceInLineAndLower(secondArray.get(indexSecond));

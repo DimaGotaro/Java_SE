@@ -7,93 +7,62 @@ import java.util.List;
 
 public class Generik {
     public static void main(String[] args) {
-        Generik generik = new Generik();
+        ArrayList<A> list1 = new ArrayList<>();
+        list1.add(new A());
+        list1.add(new B());
+        list1.add(new C());
+        A a1 = list1.get(1);
+        System.out.println(a1);
+        ArrayList<B> list2 = new ArrayList<>();
+        ArrayList<C> list3 = new ArrayList<>();
 
-        generik.addM(new ArrayList<>());
-        generik.addM(new ArrayList<>());
-        System.out.println();
+        /* Компилятор не знает коллекцию с каким дженериком мы сюда передадим.
+        * В худшем случае мы передадим коллекцию с классом, указанным в дженерике,
+        * который будет низшим в иерархии наследования. И тогда мы не сможем добавить
+        * объект в коллекцию, который выше по иерархии, чем указанный класс в дженерике,
+        * переданной коллекции. Компилятор не знает какой класс, является низшим в иерархии,
+        * по отношению к классу указанному после extends.
+        * Поэтому добавлять ничего нельзя. */
+        List<? extends B> listEx = list3;
+//        listEx.add(new C());
+        B b = listEx.get(0);
 
-        List<? super Number> list = new ArrayList<>();
-        list.add(5.5d);
-        Object object = list.get(0);
-        System.out.println(object);
-
-        List<? extends Number> list2 = new ArrayList<>();
-        Number number = list2.get(0);
-        System.out.println(number);
-//        list2.add(new Object());
-//        list2.add(6);
-
-//        list2 = list;
-//        list = list2;
-//        List<? extends Number> list3 = list;
-        List<? extends Number> list4 = list2;
-
-        ArrayList<Integer> integers = new ArrayList<>();
-        integers.add(5);
-        generik.addM2(integers);
-//        generik.addM(integers);
-        ArrayList<Object> numbers2 = new ArrayList<>();
-//        generik.addM2(numbers2);
-        generik.addM(numbers2);
-        ArrayList<Number> numbers = new ArrayList<>();
-        numbers.add(5);
-        generik.addM2(numbers);
-
-        /* не можем положить в коллекцию Integer объект Number */
-//        ArrayList<Number> numbers1 = integers;
-//        ArrayList<Integer> integers1 = numbers;
-
-        List<? extends Number> list5 = integers;
-        Number number1 = list5.get(0);
-//        list5.add(45);
-        List<? extends Number> list7 = numbers;
-//        List<? extends Number> list7 = numbers2;
-        List<? super Number> list6 = numbers2;
-        list6.add(67);
-        list6.add(67.5);
-//        list6.add(new Object());
+        /* Компилятор знает что, класс указанный после super, это низший в иерархии класс
+        * в дженерике коллекции, который мы сюда передадим. Поэтому компилятор позволяет
+        * добавлять в коллекцию объекты с классом указанным после super. А значит можно
+        * передать и объект, который наследуется от класса после super - потому что полиморфизм. */
+        List<? super B> listSup = list1;
+//        listSup.add(new A());
+        listSup.add(new B());
+        listSup.add(new C());
+        Object object2 = listSup.get(0);
 
         S<? extends B> s = new S<C>();
 //        s.setV(new C());
 //        s.setV(new A());
 //        s.setV(new B());
         B v = s.getV();
-        System.out.println(v);
 
         S<? super B> s2 = new S<A>();
         s2.setV(new C());
         s2.setV(new B());
 //        s2.setV(new A());
         Object v1 = s2.getV();
-        System.out.println(v1);
+
+        B b1 = new B();
+        A a = b1;
+        B b2 = (B) a;
+
+        A a2 = new A();
+        B b3 = (B) a2;
 
         try {
             Constructor<A> declaredConstructors = A.class.getDeclaredConstructor();
             declaredConstructors.setAccessible(true);
-            A a = declaredConstructors.newInstance();
-        } catch (NoSuchMethodException e) {
-            throw new RuntimeException(e);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
+            A a5 = declaredConstructors.newInstance();
+        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public void addM(List<? super Number> list) {
-        list.add(5.5d);
-        Object object = list.get(0);
-        System.out.println(object);
-    }
-
-    public void addM2(List<? extends Number> list) {
-        Number number = list.get(0);
-        System.out.println(number);
-//        list.add(new Object());
-//        list.add(3);
     }
 }
 class A {}

@@ -228,7 +228,7 @@ public class Main8 {
         // 1 способ
         Stream<Integer> c5 = Stream.of(6, 2, 1, 3, 5);
         Optional<Integer> c51 = c5.reduce((x,y) -> x*y); // перемножение всех элементов
-        System.out.println(c51.get());
+        c51.ifPresent(System.out::println);
         Stream<String> c6 = Stream.of("Sanji", "Bryk", "Chopper", "Robin");
         System.out.println(c6.reduce((x, y) -> x + " " + y).get()); // объеденение строк
         // 2 способ
@@ -334,6 +334,9 @@ public class Main8 {
                 new Phone2("Poco", 300, "Xiomi"),
                 new Phone2("Poco2", 589, "Xiomi"),
                 new Phone2("Juchka", 894, "Sam"));
+//        Map<String, List<Phone2>> d10 = d9.collect(Collectors.groupingBy(x -> {
+//            return x.getComp().equals("RtR") ? x.getComp() : x.getName();
+//        }));
         Map<String, List<Phone2>> d10 = d9.collect(Collectors.groupingBy(Phone2::getComp)); // назначаем ключ getComp,
         // объекты с одинаковыми ключами будут сгруппированы в список, которым является содержимое
         System.out.println(d10);

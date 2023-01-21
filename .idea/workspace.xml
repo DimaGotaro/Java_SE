@@ -4,103 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="58.1">
-      <change afterPath="$PROJECT_DIR$/src/com/Algo/A1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core2/StackTrace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core2/StringM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Debag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Str.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Tread/TR2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Tread/TreadMag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/Dev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/PM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/ProjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/banking/BankingFact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/banking/JavaDev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/banking/PMDev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/AbstractFactory/banking/QATest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/Cms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/EWebSite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/VCWebSite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/WebSite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Builder/WebSiteBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/CppDev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/CppDevFact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/Dev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/DevFact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/FactoryMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/JavaDev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/FactoryMethod/JavaDevFact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Prototype/Copy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Prototype/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Prototype/ProjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Prototype/Prototype.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Chain_of_Responsibility/ChainOfResponsibility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Chain_of_Responsibility/FNotif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Chain_of_Responsibility/Notif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Chain_of_Responsibility/SNotif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Chain_of_Responsibility/TNotif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Iterator/Coll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Iterator/Iterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Iterator/JavaD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/Iterator/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/TemplateMethod/NewsP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/TemplateMethod/PageTemp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/TemplateMethod/TemplateMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Poved/TemplateMethod/WelcomeP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Adapter/Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Adapter/DBRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Adapter/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Adapter/JavaApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/Decorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/Devel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/JavaDevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/JavaTM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/SeniorJavaDevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Decorator/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Proxy/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Proxy/Proj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Proxy/Proxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Patterns/Structural/Proxy/RealProj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="59">
+      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/Expr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Coll_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Coll_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Root.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Word.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/WordPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core/Core_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_a4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_a4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_i.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_i.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_i1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_i1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_n1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_n1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_ob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Core_ob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Lazy_Singl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Lazy_Singl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser_main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Ser_main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Singl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Singl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/SinglS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/SinglS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Exp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Exp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/F.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/F.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/G.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/G.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/MyExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/MyExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core2/Patterns/Porojd/Singl/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Singl/Singleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Collections/Coll_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Collections/Coll_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core/Core_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/Core_abstr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/Core_abstr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Core_ex_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Algo/Tasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Coll_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Stream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/Good/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/Good/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2Comp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2Comp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/PhoneComp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/PhoneComp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Collections/Coll_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Collections.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Immutable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Immutable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Stream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Test/InputOut/Good/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/Good/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +94,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE",
+    "last_opened_file_path": "E:/prog/sql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -196,39 +124,13 @@
       <recent name="com.Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.App" />
+  <component name="RunManager" selected="Application.Expr">
+    <configuration name="Expr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Core_OOP.Expr" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Coll_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Collections.Coll_1" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.Collections.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="G" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.G" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.Tread.*" />
+          <option name="PATTERN" value="com.Core_sobes.Core_OOP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -249,6 +151,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StreamMy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.StreamMy" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Core_sobes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TR2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Tread.TR2" />
       <module name="Java_SE" />
@@ -262,12 +177,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreadMag" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Tread.TreadMag" />
+    <configuration name="com.Core_sobes.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.App" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.Tread.*" />
+          <option name="PATTERN" value="com.Core_sobes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.Core_sobes.Generik" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Generik" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Core_sobes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -277,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Expr" />
+        <item itemvalue="Application.com.Core_sobes.Generik" />
+        <item itemvalue="Application.StreamMy" />
+        <item itemvalue="Application.com.Core_sobes.App" />
         <item itemvalue="Application.TR2" />
-        <item itemvalue="Application.com.Core_sobes.Tread.TreadMag" />
-        <item itemvalue="Application.com.Core_sobes.G" />
-        <item itemvalue="Application.Coll_1" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +236,7 @@
       <workItem from="1671978392314" duration="6308000" />
       <workItem from="1672565989907" duration="382000" />
       <workItem from="1672847322377" duration="67657000" />
-      <workItem from="1673721536196" duration="121557000" />
+      <workItem from="1673721536196" duration="144920000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
@@ -338,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671560024338</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="59">
+      <created>1674227947592</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674227947592</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +296,8 @@
     <MESSAGE value="57" />
     <MESSAGE value="58" />
     <MESSAGE value="58.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="58.1" />
+    <MESSAGE value="59" />
+    <option name="LAST_COMMIT_MESSAGE" value="59" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
