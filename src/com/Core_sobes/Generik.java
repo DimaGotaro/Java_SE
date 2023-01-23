@@ -56,6 +56,8 @@ public class Generik {
         A a2 = new A();
         B b3 = (B) a2;
 
+        B b4 = (B) new A();
+
         try {
             Constructor<A> declaredConstructors = A.class.getDeclaredConstructor();
             declaredConstructors.setAccessible(true);

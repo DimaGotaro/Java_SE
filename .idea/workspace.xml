@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="59">
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/Expr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" afterDir="false" />
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="60">
+      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/NewOOP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Collections/Coll_1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Stream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/Good/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/Good/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2Comp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone2Comp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Phone3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/PhoneComp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/PhoneComp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Collections/Coll_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Collections.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Stream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Test/InputOut/Good/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Test/InputOut/Good/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,12 +79,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/prog/sql",
+    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.editor"
   },
   "keyToStringList": {
@@ -124,7 +112,7 @@
       <recent name="com.Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Expr">
+  <component name="RunManager" selected="Application.NewOOP">
     <configuration name="Expr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Core_OOP.Expr" />
       <module name="Java_SE" />
@@ -151,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamMy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.StreamMy" />
+    <configuration name="NewOOP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Core_OOP.NewOOP" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
+          <option name="PATTERN" value="com.Core_sobes.Core_OOP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TR2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Tread.TR2" />
+    <configuration name="StreamMy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.StreamMy" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.Tread.*" />
+          <option name="PATTERN" value="com.Core_sobes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewOOP" />
         <item itemvalue="Application.Expr" />
         <item itemvalue="Application.com.Core_sobes.Generik" />
         <item itemvalue="Application.StreamMy" />
         <item itemvalue="Application.com.Core_sobes.App" />
-        <item itemvalue="Application.TR2" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +224,9 @@
       <workItem from="1671978392314" duration="6308000" />
       <workItem from="1672565989907" duration="382000" />
       <workItem from="1672847322377" duration="67657000" />
-      <workItem from="1673721536196" duration="144920000" />
+      <workItem from="1673721536196" duration="145349000" />
+      <workItem from="1674338604756" duration="723000" />
+      <workItem from="1674390543200" duration="21767000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
@@ -273,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674227947592</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="60">
+      <created>1674333695776</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674333695776</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +294,8 @@
     <MESSAGE value="58" />
     <MESSAGE value="58.1" />
     <MESSAGE value="59" />
-    <option name="LAST_COMMIT_MESSAGE" value="59" />
+    <MESSAGE value="60" />
+    <option name="LAST_COMMIT_MESSAGE" value="60" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
