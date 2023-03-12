@@ -37,7 +37,7 @@ public class Generik {
         listSup.add(new C());
         Object object2 = listSup.get(0);
 
-        S<? extends B> s = new S<C>();
+        S<? extends B> s = new S<B>();
 //        s.setV(new C());
 //        s.setV(new A());
 //        s.setV(new B());

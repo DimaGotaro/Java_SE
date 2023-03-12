@@ -16,6 +16,7 @@ public class Exp {
 class F extends Exp{
     @Override
     public void vvv() throws IOException {
+        throw new IOException("IOExc");
 //        в переопределённом методе можем добавить исключение, такое же, либо ниже
 //        по иерархии!
     }
@@ -31,27 +32,30 @@ class G {
 //        new Exp().vvv();
         System.out.println("2");
         try {
-            new F().vvv();
+//            new F().vvv();
 
+            NullPointerException aNull = new NullPointerException("Null");
+            System.out.println(aNull.getMessage());
+            throw aNull;
             /* блок finally не будет выполнен. Завершение программы из-за ошибки */
 //            System.exit(0);
 //            while (true) {
 //            }
-        } catch (Throwable e) {
-            e.printStackTrace();
+        } catch (RuntimeException r) {
+            System.out.println(r.getMessage());
         }
 
         System.out.println("3");
         try {
-            throw new MyExp("MyEror");
+            throw new MyExp("MyExp");
         }
         catch (MyExp e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         System.out.println("4");
     }
 }
-class MyExp extends Exception {
+class MyExp extends Throwable {
 
     @Serial
     private static final long serialVersionUID = -3748776786673086228L;

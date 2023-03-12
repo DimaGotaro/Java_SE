@@ -4,16 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="60">
-      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/Core_OOP/NewOOP.java" afterDir="false" />
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="62">
+      <change afterPath="$PROJECT_DIR$/src/com/Core_sobes/EquHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/B.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/C.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Generik.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/S.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core2/Core_2_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/Core_OOP/Day.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/other/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Test/InputOut/other/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Book_D2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Button_deistv.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Button_deistv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Client2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Client2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Company2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Company2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Count2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Count2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Count3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Count3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Emporio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Emporio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Filosof.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Filosof.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/GetEx.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/GetEx.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/GetEx2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/GetEx2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Isp_Sem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Isp_Sem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/K_Phaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/K_Phaser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Magazin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Magazin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Magazin2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Magazin2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Main8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Nacl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Nacl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Name2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Name2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Personal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Personal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Personal2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Personal2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Pidoras.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Pidoras.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Pidoras2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Pidoras2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Print.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Print.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/PutEx.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/PutEx.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Tehnik_V.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Tehnik_V.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Main3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Main3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company2/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/company3/Persona2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/company3/Persona2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Generik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Patterns/Porojd/Singl/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Patterns/Porojd/Singl/Singleton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +99,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2/lib/src.zip!/java.base/java/util/ArrayDeque.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2/lib/src.zip!/java.base/java/util/HashMap.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2/lib/src.zip!/java.base/java/util/ArrayDeque.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2/lib/src.zip!/java.base/java/util/LinkedHashMap.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -71,31 +114,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dima/IdeaProjects/Java_SE",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.editor"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="cn.yiiguxing.plugin.translate" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.Core2.Patterns.Porojd.Builder" />
@@ -112,13 +136,39 @@
       <recent name="com.Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewOOP">
+  <component name="RunManager" selected="Application.G">
+    <configuration name="EquHash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.EquHash" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Core_sobes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Expr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Core_OOP.Expr" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.Core_sobes.Core_OOP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="G" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.G" />
+      <module name="Java_SE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Core_sobes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,32 +202,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamMy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.StreamMy" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.Core_sobes.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.App" />
-      <module name="Java_SE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="com.Core_sobes.Generik" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Generik" />
       <module name="Java_SE" />
@@ -193,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.G" />
+        <item itemvalue="Application.EquHash" />
         <item itemvalue="Application.NewOOP" />
         <item itemvalue="Application.Expr" />
         <item itemvalue="Application.com.Core_sobes.Generik" />
-        <item itemvalue="Application.StreamMy" />
-        <item itemvalue="Application.com.Core_sobes.App" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +250,11 @@
       <workItem from="1672847322377" duration="67657000" />
       <workItem from="1673721536196" duration="145349000" />
       <workItem from="1674338604756" duration="723000" />
-      <workItem from="1674390543200" duration="21767000" />
+      <workItem from="1674390543200" duration="22542000" />
+      <workItem from="1674840984032" duration="193000" />
+      <workItem from="1674860645541" duration="676000" />
+      <workItem from="1676052946212" duration="6050000" />
+      <workItem from="1676291836337" duration="4429000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1649853079857</created>
@@ -270,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674333695776</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="61">
+      <created>1674473662912</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674473662912</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +330,9 @@
     <MESSAGE value="58.1" />
     <MESSAGE value="59" />
     <MESSAGE value="60" />
-    <option name="LAST_COMMIT_MESSAGE" value="60" />
+    <MESSAGE value="61" />
+    <MESSAGE value="62" />
+    <option name="LAST_COMMIT_MESSAGE" value="62" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
