@@ -27,7 +27,7 @@ class F extends Exp{
     }
 }
 class G {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception, MyExp {
         System.out.println("1");
 //        new Exp().vvv();
         System.out.println("2");
@@ -52,10 +52,10 @@ class G {
         catch (MyExp e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("4");
+        System.out.println("End");
     }
 }
-class MyExp extends Throwable {
+class MyExp extends Exception {
 
     @Serial
     private static final long serialVersionUID = -3748776786673086228L;

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -11,8 +12,30 @@ import java.util.stream.Stream;
 public class StreamMy {
     public static void main(String[] args) {
         String[] array = {"Java", "Ruuuuussshhh"};
+
+//        int length;
+//        int r = 5;
+//        r = 6;
+//
+//        int finalR = r;
+//        Function<String, String[]> function = new Function<>() {
+//            int t = 5;
+//            @Override
+//            public String[] apply(String s) {
+//                int length = array.length + finalR;
+//                return s.split("");
+//            }
+//        };
+//
+//        Function<String, Integer> function = s -> {
+//            int length = array.length + finalR;
+//            return length;
+//        };
+
+        Function<String, String[]> function = s -> s.split("");
+
         java.util.stream.Stream<String> stream = Arrays.stream(array);
-        stream.map(s -> s.split("")) //Преобразование слова в массив букв, возвращает
+        stream.map(function) // Преобразование слова в массив букв, возвращает
                 // 2 потока, которые нужно соединить с помощью flatMap
                 .flatMap(Arrays::stream).distinct()/*.toList()*/.forEach(System.out::print);
         System.out.println();
