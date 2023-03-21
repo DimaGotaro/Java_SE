@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="62">
+    <list default="true" id="f74c85f3-017a-47a7-93db-f78a31fa003d" name="Changes" comment="63">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/F.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/F.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/G.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/G.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/MyExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_SE/com/Core_sobes/MyExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/Exp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Algo/A1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Algo/A1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Core_sobes/StreamMy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +87,13 @@
       <recent name="com.Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.G">
-    <configuration name="EquHash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.EquHash" />
+  <component name="RunManager" selected="Application.A1">
+    <configuration name="A1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Algo.A1" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.*" />
+          <option name="PATTERN" value="com.Algo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Expr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.Core_OOP.Expr" />
+    <configuration name="EquHash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Core_sobes.EquHash" />
       <module name="Java_SE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Core_sobes.Core_OOP.*" />
+          <option name="PATTERN" value="com.Core_sobes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A1" />
         <item itemvalue="Application.G" />
         <item itemvalue="Application.StreamMy" />
         <item itemvalue="Application.EquHash" />
         <item itemvalue="Application.NewOOP" />
-        <item itemvalue="Application.Expr" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678622511016</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="63">
+      <created>1678716043609</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678716043609</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +297,8 @@
     <MESSAGE value="60" />
     <MESSAGE value="61" />
     <MESSAGE value="62" />
-    <option name="LAST_COMMIT_MESSAGE" value="62" />
+    <MESSAGE value="63" />
+    <option name="LAST_COMMIT_MESSAGE" value="63" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

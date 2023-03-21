@@ -65,7 +65,7 @@ public class A1 {
 
         System.out.println("XOR");
         int f = 0;
-        int[] mass5 = {9, 9, 2, 7, 7, 4, 4};
+        int[] mass5 = {7, 4, 2, 7, 9, 4, 9};
         for (int g : mass5) {
             f ^=g;
         }
